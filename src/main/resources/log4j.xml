@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Console-Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />		<!-- 输出到系统输出 -->
+		<param name="encoding" value="UTF-8" />  		<!-- 保存字符集 -->
+		<layout class="org.apache.log4j.PatternLayout">	<!-- 设置日志格式 -->
+			<param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} %c-%p : %m%n" />
+		</layout>
+	</appender>
+	<!-- File-Appenders -->
+	<appender name="file" class="org.apache.log4j.FileAppender">
+		<param name="File" value="Logs/output.log" />	<!-- 输出到文件路径 -->
+		<param name="encoding" value="UTF-8" />  		<!-- 保存字符集 -->
+		<param name="Append" value="true" />			<!-- 设置文件写入方式，false=覆盖 true=追加写入 -->
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} %c-%p : %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Application Loggers -->
+	<!-- name指定的是包名，表示这个logger只记录ftnt.qa.autotest下的所有日志  -->
+	<logger name="ftnt.qa.autotest.ui.fortisiem.testcases">
+		<level value="info" />
+	</logger>
+
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="file" />
+	</root>
+
+</log4j:configuration>
