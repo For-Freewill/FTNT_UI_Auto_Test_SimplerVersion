@@ -16,10 +16,8 @@ import ftnt.qa.autotest.ui.testbase.ITestBase;
 import ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase;
 import ftnt.qa.autotest.ui.framework.utils.CookiesUtil;
 import ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand;
-import ftnt.qa.autotest.ui.framework.utils.PageObjectUtil;
 import ftnt.qa.autotest.ui.framework.utils.PictureUtil;
 import ftnt.qa.autotest.ui.framework.utils.PropertiesUtil;
-import ftnt.qa.autotest.ui.framework.utils.InitPageObject;
 import ftnt.qa.autotest.ui.framework.utils.InitPropertiesUtil;
 
 public abstract  class TestBase implements ITestBase {
@@ -28,7 +26,6 @@ public abstract  class TestBase implements ITestBase {
 	public static boolean success = true;
 	protected static int retryMaxCount = RetryToRunCase.getMaxRetryCount();
 	protected static int reTryCount = 1;
-	private static String testCaseDeclaringClass = null;
 
 	/**
 	 * @author Lei.Wu
@@ -51,7 +48,6 @@ public abstract  class TestBase implements ITestBase {
 	@AfterMethod
 	public void cleanEnv(ITestResult rs,XmlTest xt,Method m,ITestContext tc) throws Exception {
 		try {
-			PageObjectUtil.setPageObjMap(null);
 			if (!rs.isSuccess()) {
 				if (reTryCount <= retryMaxCount) {
 					success = false;
@@ -77,39 +73,30 @@ public abstract  class TestBase implements ITestBase {
 		}
 	}
 
-	public void preCondition(ConfigDriverParameters cp) throws Exception {
-		for(Method method:Class.forName(className).getDeclaredMethods()){
-            
-        }
-		testCaseDeclaringClass = cp.getTestMethod().getDeclaringClass().getName();
-		String website = cp.getTargetWebSite();
-		displayTipInfo(website, cp.getTestMethod());
-		configDriver(cp);
+	public void preCondition() throws Exception {
+		String website = "";
+		displayTipInfo(website);
+		configDriver();
 		openTargetWebSit(website);
 	}
 
-	private void configDriver(ConfigDriverParameters cp) throws Exception {
+	private void configDriver() throws Exception {
 		webDriver = new DriverFactory().getDriver(browserType);
-		new InitPageObject(this);
-		webDriver.manage().timeouts().implicitlyWait(cp.getSerachElementTime(), TimeUnit.SECONDS);
+		webDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		webDriver.manage().window().maximize();
-		webDriver.manage().timeouts().pageLoadTimeout(cp.getPageLoadTime(), TimeUnit.SECONDS);
+		webDriver.manage().timeouts().pageLoadTimeout(1000, TimeUnit.SECONDS);
 	}
 
 	@SuppressWarnings("unused")
-	private void displayTipInfo(String website, Method m) {
+	private void displayTipInfo(String website) {
 		if (!success) {
 			System.out.println("\n=======测试用例准备重试=======");
 			reTryCount++;
 			success = true;
 		}
-		System.out.println("\n======测试用例: " + m.getName() + " 开始执行======" + "\n===测试用例运行的浏览器类型：" + browserType + " ==="
+		System.out.println("\n======测试用例: " + " 开始执行======" + "\n===测试用例运行的浏览器类型：" + browserType + " ==="
 				+ "\n测试网站地址: " + website);
 
-	}
-
-	public static String getTestCaseDeclaringClass() {
-		return testCaseDeclaringClass;
 	}
 
 	private void openTargetWebSit(String website) {
