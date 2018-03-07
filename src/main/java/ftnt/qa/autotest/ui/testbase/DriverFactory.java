@@ -5,13 +5,13 @@ import ftnt.qa.autotest.ui.framework.interfaces.IBrowserDriverBase;
 import ftnt.qa.autotest.ui.framework.interfaces.IWebdriverFactory;
 
 /**
- * @author xin.wang
+ * @author Lei.Wu
  * @see 用于配置和生产基于不同浏览器的webdriver。
  */
 public class DriverFactory  implements IWebdriverFactory {
 
 	/**
-	 * @author xin.wang
+	 * @author Lei.Wu
 	 * @param classPackageName
 	 *            浏览器类型
 	 * @throws Exception

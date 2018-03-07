@@ -3,7 +3,7 @@ package ftnt.qa.autotest.ui.framework.interfaces;
 /**
  * 实例化目标浏览器接口
  * 
- * @author xin.wang
+ * @author Lei.Wu
  *
  */
 public interface IBrowserDriverBase {

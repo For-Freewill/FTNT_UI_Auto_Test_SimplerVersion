@@ -21,5 +21,8 @@ public class PropertiesUtil {
 	public static HashMap<String, String> getProKVMap(){
 		return proKeyValus;
 	}
+	public static void main(String[] args) {
+		
+	}
 }
 

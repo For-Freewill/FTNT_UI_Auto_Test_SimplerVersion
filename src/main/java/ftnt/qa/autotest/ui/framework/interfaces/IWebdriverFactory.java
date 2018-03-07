@@ -1,7 +1,7 @@
 package ftnt.qa.autotest.ui.framework.interfaces;
 
 /**
- * @author xin.wang Webdriver 工厂接口
+ * @author Lei.Wu Webdriver 工厂接口
  */
 public interface IWebdriverFactory {
 	

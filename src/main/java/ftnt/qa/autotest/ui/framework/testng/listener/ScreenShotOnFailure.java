@@ -21,7 +21,7 @@ public class ScreenShotOnFailure {
 			screenShotDir.mkdirs();
 		}
 
-		SCREEN_SHOT_NAME = String.valueOf(new Date().getTime()) + ".jpg";
+		SCREEN_SHOT_NAME = "Screenshot_"+String.valueOf(new Date().getTime()) + ".jpg";
 		FileUtils.copyFile(TestBase.getWebDriver().getScreenshotAs(OutputType.FILE),
 				new File(SCREEN_SHOT_PATH + "/" + SCREEN_SHOT_NAME));
 	}

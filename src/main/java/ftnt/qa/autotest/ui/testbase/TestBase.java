@@ -32,7 +32,7 @@ public abstract  class TestBase implements ITestBase {
 
 	/**
 	 * @author Lei.Wu
-	 * @see 在测试集运行前确定要运行测试的浏览器类型
+	 * @see 
 	 */
 	@BeforeSuite(alwaysRun = true)
 	public void initTest(XmlTest xt,ITestContext tc) throws Exception {
@@ -78,6 +78,9 @@ public abstract  class TestBase implements ITestBase {
 	}
 
 	public void preCondition(ConfigDriverParameters cp) throws Exception {
+		for(Method method:Class.forName(className).getDeclaredMethods()){
+            
+        }
 		testCaseDeclaringClass = cp.getTestMethod().getDeclaringClass().getName();
 		String website = cp.getTargetWebSite();
 		displayTipInfo(website, cp.getTestMethod());
