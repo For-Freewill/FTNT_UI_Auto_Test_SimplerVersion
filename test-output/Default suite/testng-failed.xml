@@ -5,7 +5,8 @@
     <classes>
       <class name="ftnt.qa.autotest.ui.fortisiem.pageobject.test">
         <methods>
-          <include name="testIoc"/>
+          <include name="function1"/>
+          <include name="function3"/>
         </methods>
       </class> <!-- ftnt.qa.autotest.ui.fortisiem.pageobject.test -->
     </classes>

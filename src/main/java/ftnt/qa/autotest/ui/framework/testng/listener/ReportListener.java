@@ -67,7 +67,7 @@ public class ReportListener implements IReporter {
 
   /** Creates summary of the run */
   @Override
-  public void generateReport(List<XmlSuite> xml, List<ISuite> suites, String outdir) {
+  public void  generateReport(List<XmlSuite> xml, List<ISuite> suites, String outdir) {
     try {
     	outdir="test-output/html-report";//自定义的输出路径
     	m_out = createWriter(outdir); 

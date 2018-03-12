@@ -2,8 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.ReportListener"/>
-    <listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.RetryListener"/>
     <listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.TestNGListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">

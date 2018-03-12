@@ -28,7 +28,7 @@ public class ScreenShotOnFailure {
     private String pngfile; //失败截屏保存的图片名 :ScreenShotOnFail_LoginTest_2018-03-09 15-16-02.png
 
     public ScreenShotOnFailure(WebDriver driver,ITestResult tr){
-        this.driver=driver;
+        this.driver=TestNGListener.driver;//如果不合并三个监听器，这里初始化就用this.driver=driver
         path=System.getProperty("user.dir")+ "\\test-output\\screen-shot\\";
         pngfile=path+this.getClass().getSimpleName()+"_"+tr.getName()+"_"+getCurrentTime() + ".png";
     }

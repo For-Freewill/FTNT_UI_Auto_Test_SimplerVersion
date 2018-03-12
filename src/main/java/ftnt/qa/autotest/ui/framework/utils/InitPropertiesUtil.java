@@ -4,10 +4,13 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Properties;
+
+import javax.annotation.Resource;
 
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
 
@@ -19,7 +22,9 @@ public class InitPropertiesUtil {
 	 */
 
 	public InitPropertiesUtil() {
-		PropertiesUtil.setKeyValueMap(initKeyValueMap(System.getProperty(CommonConstants.CONFIG_FOLDER_PATH_KEY)));
+		String path=System.getProperty("user.dir");
+        System.out.println("init path=="+path);
+		PropertiesUtil.setKeyValueMap(initKeyValueMap(path));
 	}
 
 	public HashMap<String, String> initKeyValueMap(String floderPath) {
