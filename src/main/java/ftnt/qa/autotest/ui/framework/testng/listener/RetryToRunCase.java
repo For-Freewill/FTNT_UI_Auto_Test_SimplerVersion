@@ -1,5 +1,6 @@
 package ftnt.qa.autotest.ui.framework.testng.listener;
 
+import org.apache.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -12,7 +13,7 @@ import ftnt.qa.autotest.ui.testbase.TestBase;
 public class RetryToRunCase implements IRetryAnalyzer {
 
 	private int retryCount = 1;
-
+	public static Logger logger=Logger.getLogger(RetryToRunCase.class);
 	private static int maxRetryCount;
 
 	public int getRetryCount() {
@@ -30,7 +31,10 @@ public class RetryToRunCase implements IRetryAnalyzer {
 
 	public boolean retry(ITestResult result) {
 		if (retryCount <= maxRetryCount) {
-			Reporter.setCurrentTestResult(result);
+			String message="方法<"+result.getName()+">执行失败，重试第"+retryCount+"次";
+            logger.info(message);
+            Reporter.setCurrentTestResult(result);
+            Reporter.log(message);
 			TestBase.success = false;
 			retryCount++;
 			return true;

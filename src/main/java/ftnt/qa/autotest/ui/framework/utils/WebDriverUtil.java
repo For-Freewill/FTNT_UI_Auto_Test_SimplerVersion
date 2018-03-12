@@ -1,13 +1,13 @@
 package ftnt.qa.autotest.ui.framework.utils;
 
 
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.WebDriver;
 
 import ftnt.qa.autotest.ui.testbase.TestBase;
 
 public class WebDriverUtil {
 	
-	public static RemoteWebDriver getWebDriverInstance(){
+	public static WebDriver getWebDriverInstance(){
 		return TestBase.getWebDriver();
 	}
 }

@@ -32,6 +32,7 @@ public class ExcuteBatCommand {
 	public static void main(String[] args) throws URISyntaxException {
 		String pth1=System.getProperty("user.dir");
 		System.out.println(pth1);
+		System.out.println(pth1);
 		executeBatFile(pth1+CommonConstants.KILL_DRIVER_PROCESS_BAT);
 	}
 

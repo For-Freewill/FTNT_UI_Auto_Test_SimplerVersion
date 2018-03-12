@@ -1,0 +1,9 @@
+2018-03-12 14:33:35 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第[TestResult name=function1 status=FAILURE method=test.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.test@4b4523f8] output={null}]次
+2018-03-12 14:33:41 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第[TestResult name=function1 status=FAILURE method=test.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.test@4b4523f8] output={null}]次
+2018-03-12 14:33:45 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第[TestResult name=function1 status=FAILURE method=test.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.test@4b4523f8] output={null}]次
+2018-03-12 14:38:12 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
+2018-03-12 14:38:27 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第2次
+2018-03-12 14:38:45 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第3次
+2018-03-12 14:39:23 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第1次
+2018-03-12 14:39:23 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第2次
+2018-03-12 14:39:23 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第3次

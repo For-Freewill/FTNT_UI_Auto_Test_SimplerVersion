@@ -1,39 +1,32 @@
 package ftnt.qa.autotest.ui.framework.testng.listener;
 
-import java.io.IOException;
-import java.lang.reflect.Constructor;  
-import java.lang.reflect.Method;  
-import java.util.ArrayList;  
-import java.util.Arrays;  
-import java.util.HashSet;  
-import java.util.Iterator;  
-import java.util.Set;  
-import org.testng.IRetryAnalyzer;  
-import org.testng.ITestContext;  
-import org.testng.ITestListener;  
-import org.testng.ITestResult;  
-import org.testng.annotations.ITestAnnotation;  
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
-public class TestngRetryListener implements ITestListener {
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.TestListenerAdapter;
+
+public class ScreenShotListener extends TestListenerAdapter {
+	public static WebDriver driver;
+
+	public static WebDriver getDriver() {
+		return driver;
+	}
+
+	public static void setDriver(WebDriver driver) {
+		ScreenShotListener.driver = driver;
+	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		try {
-			ScreenShotOnFailure.takeScreentShot();
-			System.out.println(result.getMethod().getMethodName() + " failed, the screenshot saved in "
-					+ ScreenShotOnFailure.getScreenShotPath() + " screenshot name : "
-					+ ScreenShotOnFailure.getScreenShotName());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@SuppressWarnings("rawtypes")
-	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-		IRetryAnalyzer retry = annotation.getRetryAnalyzer();
-		if (retry == null) {
-			annotation.setRetryAnalyzer(RetryToRunCase.class);
-		}
+		super.onTestFailure(result);
+		ScreenShotOnFailure screenshot = new ScreenShotOnFailure(driver, result);
+		screenshot.getScreenShot();
 	}
 
 	@Override
@@ -61,16 +54,16 @@ public class TestngRetryListener implements ITestListener {
 				iterator.remove();
 			}
 		}
-		
+
 	}
-	
-    private int getId(ITestResult result) {  
-        int id = result.getTestClass().getName().hashCode();  
-        id = id + result.getMethod().getMethodName().hashCode();  
-        id = id + (result.getParameters() != null ? Arrays.hashCode(result.getParameters()) : 0);  
-        return id;  
-    }  
-    
+
+	private int getId(ITestResult result) {
+		int id = result.getTestClass().getName().hashCode();
+		id = id + result.getMethod().getMethodName().hashCode();
+		id = id + (result.getParameters() != null ? Arrays.hashCode(result.getParameters()) : 0);
+		return id;
+	}
+
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -98,6 +91,5 @@ public class TestngRetryListener implements ITestListener {
 	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
-
 	}
 }

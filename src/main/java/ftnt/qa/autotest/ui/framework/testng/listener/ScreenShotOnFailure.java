@@ -1,36 +1,74 @@
 package ftnt.qa.autotest.ui.framework.testng.listener;
-
-
 import java.io.File;
-import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 
-import ftnt.qa.autotest.ui.testbase.TestBase;
 
+/**
+ * 失败Case保存截图并保存到指定目录
+ * @see 
+ * @author Lei.Wu
+ */
 public class ScreenShotOnFailure {
 
-	private final static String SCREEN_SHOT_PATH = "test-output/screen-shot";
-	private static String SCREEN_SHOT_NAME = null;
+    private WebDriver driver;
+    
+    
+    private String path;// 测试失败截屏保存的路径()
+    private String pngfile; //失败截屏保存的图片名 :ScreenShotOnFail_LoginTest_2018-03-09 15-16-02.png
 
-	public static void takeScreentShot() throws IOException {
-		File screenShotDir = new File(SCREEN_SHOT_PATH);
+    public ScreenShotOnFailure(WebDriver driver,ITestResult tr){
+        this.driver=driver;
+        path=System.getProperty("user.dir")+ "\\test-output\\screen-shot\\";
+        pngfile=path+this.getClass().getSimpleName()+"_"+tr.getName()+"_"+getCurrentTime() + ".png";
+    }
+
+	public void getScreenShot() {
+		File screenShotDir = new File("test-output/screen-shot");
 		if (!screenShotDir.exists()) {
 			screenShotDir.mkdirs();
 		}
+        File screen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File screenFile = new File(pngfile);
+        try {
+            FileUtils.copyFile(screen, screenFile);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-		SCREEN_SHOT_NAME = "Screenshot_"+String.valueOf(new Date().getTime()) + ".jpg";
-		FileUtils.copyFile(TestBase.getWebDriver().getScreenshotAs(OutputType.FILE),
-				new File(SCREEN_SHOT_PATH + "/" + SCREEN_SHOT_NAME));
+
+    /**
+     * 获取当前时间
+     */
+    public String getCurrentTime(){
+        Date date=new Date();
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+        String currentTime=sdf.format(date);
+        return currentTime; 
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+    
+    public String getPngfile() {
+		return pngfile;
 	}
 
-	public static String getScreenShotPath() {
-		return SCREEN_SHOT_PATH;
+	public void setPngfile(String pngfile) {
+		this.pngfile = pngfile;
 	}
 
-	public static String getScreenShotName() {
-		return SCREEN_SHOT_NAME;
-	}
+
 }

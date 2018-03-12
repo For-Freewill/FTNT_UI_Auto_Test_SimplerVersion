@@ -3,6 +3,7 @@ package ftnt.qa.autotest.ui.testbase;
 import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeSuite;
 import org.testng.xml.XmlTest;
@@ -21,7 +22,7 @@ import ftnt.qa.autotest.ui.framework.utils.PropertiesUtil;
 import ftnt.qa.autotest.ui.framework.utils.InitPropertiesUtil;
 
 public abstract  class TestBase implements ITestBase {
-	protected static RemoteWebDriver webDriver;
+	protected static WebDriver webDriver;
 	protected static String browserType;
 	public static boolean success = true;
 	protected static int retryMaxCount = RetryToRunCase.getMaxRetryCount();
@@ -120,7 +121,7 @@ public abstract  class TestBase implements ITestBase {
 	 * @see 获取webdriver对象实例
 	 */
 
-	public static RemoteWebDriver getWebDriver() {
+	public static WebDriver getWebDriver() {
 		return webDriver;
 	}
 }

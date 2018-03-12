@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
-  <test name="Test">
-    <classes>
-      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.NewTest"/>
-    </classes>
-  </test> <!-- Test -->
+	<test name="Test">
+		<classes>
+			<class name="ftnt.qa.autotest.ui.fortisiem.pageobject.test" />
+		</classes>
+		<listeners>
+			<listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.ReportListener" />
+			<listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.RetryListener" />
+			<listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.ScreenShotListener" />
+		</listeners>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->
