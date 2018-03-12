@@ -7,9 +7,17 @@ import org.testng.Reporter;
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
 import ftnt.qa.autotest.ui.testbase.TestBase;
 
+
 /**
- * @author xin.wang 实现testng接口实现用例失败重跑
+ * 失败Case 自动重试实现
+ * @see 监听器实现自动重试功能
+ * @author Lei.Wu
+ * @date 2018-3-12
+ * @version FTNT-UI-AutoTest Version 1.0
+ * @since Jdk1.8
  */
+
+
 public class RetryToRunCase implements IRetryAnalyzer {
 
 	private int retryCount = 1;

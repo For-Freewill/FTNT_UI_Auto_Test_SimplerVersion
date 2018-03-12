@@ -12,9 +12,13 @@ import org.testng.ITestResult;
 
 /**
  * 失败Case保存截图并保存到指定目录
- * @see 
+ * @see 监听器实现失败截图
  * @author Lei.Wu
+ * @date 2018-3-12
+ * @version FTNT-UI-AutoTest Version 1.0
+ * @since Jdk1.8
  */
+
 public class ScreenShotOnFailure {
 
     private WebDriver driver;

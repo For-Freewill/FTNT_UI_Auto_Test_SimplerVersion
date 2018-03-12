@@ -31,10 +31,12 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.nio.file.Files.newBufferedWriter;
 
 /**
- * Reported designed to render self-contained HTML top down view of a testing
- * suite.
- *
- * @since 5.2
+ * 自定义报表监听器
+ * @see EmailableReporter源码
+ * @author Lei.Wu
+ * @date 2018-3-12
+ * @version FTNT-UI-AutoTest Version 1.0
+ * @since Jdk1.8
  */
 public class ReportListener implements IReporter {
   private static final Logger L = Logger.getLogger(ReportListener.class);
@@ -49,7 +51,7 @@ public class ReportListener implements IReporter {
 
   private int m_methodIndex;
 
-  private String fileName = "TestResultReportWL.html";//输出的html文件名称
+  private String fileName = "TestResultReportWL.html";//自定义输出的html文件名称
 
   private static final String JVM_ARG = "emailable.report.name";
 
