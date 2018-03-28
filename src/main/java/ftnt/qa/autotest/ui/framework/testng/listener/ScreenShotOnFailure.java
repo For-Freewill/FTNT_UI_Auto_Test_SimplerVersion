@@ -38,7 +38,7 @@ public class ScreenShotOnFailure {
 		if (!screenShotDir.exists()) {
 			screenShotDir.mkdirs();
 		}
-        File screen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File screen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);//selenium封装的截图
         File screenFile = new File(pngfile);
         try {
             FileUtils.copyFile(screen, screenFile);

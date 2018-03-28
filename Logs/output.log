@@ -1,26 +1,18 @@
-2018-03-12 14:33:35 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第[TestResult name=function1 status=FAILURE method=test.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.test@4b4523f8] output={null}]次
-2018-03-12 14:33:41 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第[TestResult name=function1 status=FAILURE method=test.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.test@4b4523f8] output={null}]次
-2018-03-12 14:33:45 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第[TestResult name=function1 status=FAILURE method=test.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.test@4b4523f8] output={null}]次
-2018-03-12 14:38:12 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 14:38:27 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第2次
-2018-03-12 14:38:45 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第3次
-2018-03-12 14:39:23 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第1次
-2018-03-12 14:39:23 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第2次
-2018-03-12 14:39:23 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第3次
-2018-03-12 16:07:44 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 16:07:57 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第2次
-2018-03-12 16:08:17 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第3次
-2018-03-12 16:13:30 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 16:19:40 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 16:19:56 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第1次
-2018-03-12 16:22:39 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 16:22:53 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第1次
-2018-03-12 16:23:50 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 16:24:01 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第1次
-2018-03-12 16:43:57 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 16:44:07 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第1次
-2018-03-12 17:14:49 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 17:16:11 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 17:17:09 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 18:06:37 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function1>执行失败，重试第1次
-2018-03-12 18:07:01 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function3>执行失败，重试第1次
+2018-03-28 18:32:22 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 当前测试开始时间是：Wed Mar 28 18:32:22 CST 2018
+2018-03-28 18:32:22 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 开始运行测试,当前测试类是:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase
+2018-03-28 18:32:25 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 
+=====开始执行测试方法=====
+=====测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
+=====测试网站地址: https://10.30.2.171/phoenix/login-html.jsf
+2018-03-28 18:32:32 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : =====测试方法: function1 运行成功=====
+2018-03-28 18:32:34 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 测试类ftnt.qa.autotest.ui.fortisiem.pageobject.testBase执行完毕
+2018-03-28 18:32:34 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 当前测结束时间是：Wed Mar 28 18:32:22 CST 2018
+2018-03-28 18:33:56 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 当前测试开始时间是：Wed Mar 28 18:33:56 CST 2018
+2018-03-28 18:33:56 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 开始运行测试,当前测试类是:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase
+2018-03-28 18:33:58 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 
+=====开始执行测试方法=====
+=====测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
+=====测试网站地址: https://10.30.2.171/phoenix/login-html.jsf
+2018-03-28 18:34:03 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : =====测试方法: function1 运行成功=====
+2018-03-28 18:34:06 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 测试类：ftnt.qa.autotest.ui.fortisiem.pageobject.testBase 执行完毕
+2018-03-28 18:34:06 ftnt.qa.autotest.ui.fortisiem.testcases.LogTest-INFO : 当前测结束时间是：null

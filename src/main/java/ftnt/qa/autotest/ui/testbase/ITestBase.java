@@ -23,24 +23,24 @@ public interface ITestBase {
 	@BeforeSuite
 	public void initTest(XmlTest xt, ITestContext tc) throws Exception;
 
-	@AfterSuite
-	public void terminTestSuite(XmlTest xt, ITestContext tc) throws Exception;
+//	@AfterSuite
+//	public void terminTestSuite(XmlTest xt, ITestContext tc) throws Exception;
 
 	@BeforeClass
 	public void beforeClass(XmlTest xt, ITestContext tc) throws Exception;
 
-	@AfterClass
-	public void afterClass(XmlTest xt, ITestContext tc) throws Exception;
+//	@AfterClass
+//	public void afterClass(XmlTest xt, ITestContext tc) throws Exception;
+//
+//	@BeforeTest
+//	public void beforeTest(XmlTest xt, ITestContext tc) throws Exception;
 
-	@BeforeTest
-	public void beforeTest(XmlTest xt, ITestContext tc) throws Exception;
-
-	@AfterTest
-	public void afterTest(XmlTest xt, ITestContext tc) throws Exception;
+//	@AfterTest
+//	public void afterTest(XmlTest xt, ITestContext tc) throws Exception;
 
 	@BeforeMethod
 	public void initDriver(ITestContext tc, Method m, XmlTest xt) throws Exception;
 
-	@AfterMethod
-	public void cleanEnv(ITestResult rs, XmlTest xt, Method m, ITestContext tc) throws Exception;
+//	@AfterMethod
+//	public void cleanEnv(ITestResult rs, XmlTest xt, Method m, ITestContext tc) throws Exception;
 }

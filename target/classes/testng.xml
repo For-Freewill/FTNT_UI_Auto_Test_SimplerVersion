@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
 	<test name="Test">
 		<classes>
-			<class name="ftnt.qa.autotest.ui.fortisiem.pageobject.test" />
+			<class name="ftnt.qa.autotest.ui.fortisiem.pageobject.testBase" />
 		</classes>
 		<listeners>
 			<!-- <listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.ReportListener" 
