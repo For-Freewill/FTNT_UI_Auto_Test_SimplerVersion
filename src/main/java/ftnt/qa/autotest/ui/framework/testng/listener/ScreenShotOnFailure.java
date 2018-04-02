@@ -3,11 +3,15 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
+
+import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
+import ftnt.qa.autotest.ui.framework.utils.CommonsPropertiesUtils;
 
 
 /**
@@ -33,8 +37,9 @@ public class ScreenShotOnFailure {
         pngfile=path+this.getClass().getSimpleName()+"_"+tr.getName()+"_"+getCurrentTime() + ".png";
     }
 
-	public void getScreenShot() {
-		File screenShotDir = new File("test-output/screen-shot");
+	public void getScreenShot() throws ConfigurationException {
+		String screenShotPath = CommonsPropertiesUtils.ReadSingleProperties(CommonConstants.PROPEERTIES_FILE_PATH, "failedcase.screenShotPath");
+		File screenShotDir = new File(screenShotPath);
 		if (!screenShotDir.exists()) {
 			screenShotDir.mkdirs();
 		}

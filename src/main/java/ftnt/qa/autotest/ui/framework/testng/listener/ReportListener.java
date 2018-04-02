@@ -1,4 +1,5 @@
 package ftnt.qa.autotest.ui.framework.testng.listener;
+import org.apache.commons.configuration.ConfigurationException;
 //源码：https://github.com/cbeust/testng/blob/master/src/main/java/org/testng/reporters/EmailableReporter.java
 import org.testng.IInvokedMethod;
 import org.testng.IReporter;
@@ -14,6 +15,9 @@ import org.testng.collections.Lists;
 import org.testng.internal.Utils;
 import org.testng.log4testng.Logger;
 import org.testng.xml.XmlSuite;
+
+import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
+import ftnt.qa.autotest.ui.framework.utils.CommonsPropertiesUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -69,10 +73,10 @@ public class ReportListener implements IReporter {
   @Override
   public void  generateReport(List<XmlSuite> xml, List<ISuite> suites, String outdir) {
     try {
-    	outdir="test-output/html-report";//自定义的输出路径
+    	outdir=CommonsPropertiesUtils.ReadSingleProperties(CommonConstants.PROPEERTIES_FILE_PATH,"testcase.htmlreport.path");
     	m_out = createWriter(outdir); 
     }
-    catch (IOException e) {
+    catch (IOException | ConfigurationException e) {
       L.error("output file", e);
       return;
     }

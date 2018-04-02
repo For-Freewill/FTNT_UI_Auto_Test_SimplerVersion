@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import org.apache.commons.configuration.ConfigurationException;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -33,7 +34,11 @@ public class ScreenShotListener extends TestListenerAdapter {
 	public void onTestFailure(ITestResult result) {
 		super.onTestFailure(result);
 		ScreenShotOnFailure screenshot = new ScreenShotOnFailure(driver, result);
-		screenshot.getScreenShot();
+		try {
+			screenshot.getScreenShot();
+		} catch (ConfigurationException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

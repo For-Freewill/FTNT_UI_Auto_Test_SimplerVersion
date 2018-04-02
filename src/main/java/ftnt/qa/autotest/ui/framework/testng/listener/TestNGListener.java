@@ -4,6 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.List;
 
+import org.apache.commons.configuration.ConfigurationException;
 import org.openqa.selenium.WebDriver;
 import org.testng.IAnnotationTransformer;
 import org.testng.IReporter;
@@ -40,7 +41,11 @@ public class TestNGListener extends TestListenerAdapter implements IReporter,IAn
 	public void onTestFailure(ITestResult result) {
 		super.onTestFailure(result);
 		ScreenShotOnFailure screenshot = new ScreenShotOnFailure(driver, result);
-		screenshot.getScreenShot();
+		try {
+			screenshot.getScreenShot();
+		} catch (ConfigurationException e) {
+			e.printStackTrace();
+		}
 	}
 	
 //	@Override //使用Emailalbe report 的源码设计的监听器

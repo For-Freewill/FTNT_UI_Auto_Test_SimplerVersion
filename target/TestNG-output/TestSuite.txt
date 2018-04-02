@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 54.058 s <<< FAILURE! - in TestSuite
-function2(ftnt.qa.autotest.ui.fortisiem.pageobject.testBase)  Time elapsed: 1.773 s  <<< FAILURE!
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 54.345 s <<< FAILURE! - in TestSuite
+function2(ftnt.qa.autotest.ui.fortisiem.pageobject.testBase)  Time elapsed: 1.741 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 	at ftnt.qa.autotest.ui.fortisiem.pageobject.testBase.function2(testBase.java:37)
 
