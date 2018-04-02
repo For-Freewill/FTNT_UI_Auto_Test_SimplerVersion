@@ -12,14 +12,15 @@
 	</appender>
 	<!-- File-Appenders -->
 	<appender name="file" class="org.apache.log4j.FileAppender">
-		<param name="File" value="Logs/output.log" />	<!-- 输出到文件路径 -->
+		<param name="File" value="TestNG-output/Ftnt_UI_AutoMation.log" />	<!-- 输出到文件路径 -->
 		<param name="encoding" value="UTF-8" />  		<!-- 保存字符集 -->
-		<param name="Append" value="true" />			<!-- 设置文件写入方式，false=覆盖 true=追加写入 -->
+		<param name="Append" value="false" />			<!-- 设置文件写入方式，false=覆盖 true=追加写入 -->
 		<param name="threshold" value="info" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} %c-%p : %m%n" />
 		</layout>
 	</appender>
+
 
 	<!-- Application Loggers -->
 	<!-- name指定的是包名，表示这个logger只记录ftnt.qa.autotest下的所有日志  -->

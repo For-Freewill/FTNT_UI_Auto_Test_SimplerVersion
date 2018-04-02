@@ -23,8 +23,8 @@ public interface ITestBase {
 	@BeforeSuite
 	public void initTest(XmlTest xt, ITestContext tc) throws Exception;
 
-//	@AfterSuite
-//	public void terminTestSuite(XmlTest xt, ITestContext tc) throws Exception;
+	@AfterSuite
+	public void terminTestSuite(XmlTest xt, ITestContext tc) throws Exception;
 
 	@BeforeClass
 	public void beforeClass(XmlTest xt, ITestContext tc) throws Exception;

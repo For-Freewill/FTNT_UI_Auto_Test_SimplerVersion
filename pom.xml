@@ -11,10 +11,12 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding><!-- 
 			文件拷贝时的 -->
 		<maven.compiler.encoding>UTF-8</maven.compiler.encoding><!-- 编译时的编码 -->
-		<selenium-version>3.10.0</selenium-version> <!-- Selenium3.10的版本 -->
+		<selenium-version>3.11.0</selenium-version> <!-- Selenium3.10的版本 -->
 		<testng-version>6.14.2</testng-version><!-- TestNG版本，testng6+selenium3 -->
 		<junit-version>4.12</junit-version><!-- JUnit版本 -->
 		<slf4j>1.6.6</slf4j><!-- Log4j 版本 -->
+		<maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
+		<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
 	</properties>
 
 	<dependencies>
@@ -35,19 +37,42 @@
 
 		<!-- Start-TestNG&JUnit框架 -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit-version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>${testng-version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
 		<!-- End-TestNG&JUnit 框架 -->
+
+		<!-- Start-ReportNG相关的包，缺一不可 -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
+
+		<!-- Stop-ReportNG -->
+
 
 		<!-- Start-Apache Commons包 -->
 		<dependency>
@@ -69,18 +94,30 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.15</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.5</version>
+		</dependency>
+
+		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.6</version>
 		</dependency>
-
-		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-			<version>1.9.3</version>
-		</dependency>
 		<!-- End-Apache Commons包 -->
 
+		<!-- Start-Excel4j-Excel操作包 -->
+		<dependency>
+			<groupId>com.github.crab2died</groupId>
+			<artifactId>Excel4J</artifactId>
+			<version>2.1.2</version>
+		</dependency>
 
 		<!-- Start-MySQL connector -->
 		<dependency>
@@ -147,8 +184,28 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<!-- 控制资源文件的拷贝target/classes 目录 -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>${project.build.directory}/classes</targetPath>
+			</resource>
+
+			<!-- 控制浏览器驱动文件目录复制到target/BrowserDriver 目录 ，必须设置 -->
+			<resource>
+				<directory>BrowserDriver</directory>
+				<targetPath>${project.build.directory}/BrowserDriver</targetPath>
+			</resource>
+
+			<!-- 控制TestNG-output的拷贝target/TestNG-output 目录，这个是用于maven执行时的打包 -->
+			<resource>
+				<directory>TestNG-output</directory>
+				<targetPath>${project.build.directory}/TestNG-output</targetPath>
+			</resource>
+		</resources>
+
 		<plugins>
-		<!--设置JAVA版本，这里使用-->
+			<!--设置JAVA版本，这里使用 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -161,20 +218,42 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
+			
+			<!-- The configuration of maven-jar-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<!-- The configuration of the plugin -->
+				<configuration>
+					<!-- Configuration of the archiver -->
+					<archive>
+						<!-- 生成的jar中，不要包含pom.xml和pom.properties这两个文件 -->
+						<addMavenDescriptor>true</addMavenDescriptor>
+						<!-- Manifest specific configuration -->
+						<manifest>
+							<!-- 是否要把第三方jar放到manifest的classpath中 -->
+							<addClasspath>true</addClasspath>
+							<!-- 生成的manifest中classpath的前缀，因为要把第三方jar放到lib目录下，所以classpath的前缀是lib/ -->
+							<classpathPrefix>lib/</classpathPrefix>
+							<!-- 应用的main class -->
+							<mainClass>ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 
+			<!-- The configuration of maven-assembly-plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>3.1.0</version>
+				<!-- The configuration of the plugin -->
 				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>ftnt.qa.autotest.ui.fortisiem.testcases.LogTest</mainClass>
-						</manifest>
-					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
+					<!-- Specifies the configuration file of the assembly plugin -->
+					<descriptors>
+						<descriptor>src/main/assembly/assembly.xml</descriptor>
+					</descriptors>
 				</configuration>
 				<executions>
 					<execution>
@@ -185,6 +264,59 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			
+			<!--打包 -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-assembly-plugin</artifactId> -->
+<!-- 				<version>3.1.0</version> -->
+<!-- 				<configuration> -->
+<!-- 					<archive> -->
+<!-- 						<manifest> -->
+<!-- 							<mainClass>ftnt.qa.autotest.ui.fortisiem.testcases.LogTest</mainClass> -->
+<!-- 						</manifest> -->
+<!-- 					</archive> -->
+<!-- 					<descriptorRefs> -->
+<!-- 						<descriptorRef>jar-with-dependencies</descriptorRef> -->
+<!-- 					</descriptorRefs> -->
+<!-- 				</configuration> -->
+<!-- 				<executions> -->
+<!-- 					<execution> -->
+<!-- 						<id>make-assembly</id> -->
+<!-- 						<phase>package</phase> -->
+<!-- 						<goals> -->
+<!-- 							<goal>single</goal> -->
+<!-- 						</goals> -->
+<!-- 					</execution> -->
+<!-- 				</executions> -->
+<!-- 			</plugin> -->
+
+			<!--testng -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+					</suiteXmlFiles>
+					<testFailureIgnore>true</testFailureIgnore>
+					<properties>
+						<property>
+							<name>usedefaultlisteners</name>
+							<value>false</value>
+						</property>
+						<property>
+							<name>listener</name>
+							<value>org.uncommons.reportng.HTMLReporter,
+								org.uncommons.reportng.JUnitXMLReporter,
+								ftnt.qa.autotest.ui.framework.testng.listener.TestNGListener</value>
+						</property>
+					</properties>
+					<reportsDirectory>TestNG-output/</reportsDirectory>
+					<workingDirectory>target/</workingDirectory>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

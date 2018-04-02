@@ -43,7 +43,6 @@ public class RetryToRunCase implements IRetryAnalyzer {
             logger.info(message);
             Reporter.setCurrentTestResult(result);
             Reporter.log(message);
-			TestBase.success = false;
 			retryCount++;
 			return true;
 		}

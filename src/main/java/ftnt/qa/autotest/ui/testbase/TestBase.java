@@ -1,67 +1,92 @@
 package ftnt.qa.autotest.ui.testbase;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
+import java.sql.Date;
+import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.xml.XmlTest;
 
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
-import ftnt.qa.autotest.ui.framework.constants.PropertiesKeys;
-import ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase;
+import ftnt.qa.autotest.ui.framework.testng.listener.TestNGListener;
+import ftnt.qa.autotest.ui.framework.utils.CommonsPropertiesUtils;
 import ftnt.qa.autotest.ui.framework.utils.CookiesUtil;
+import ftnt.qa.autotest.ui.framework.utils.DateUtil;
+import ftnt.qa.autotest.ui.framework.utils.EmailUtil;
 import ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand;
-import ftnt.qa.autotest.ui.framework.utils.InitPropertiesUtil;
-import ftnt.qa.autotest.ui.framework.utils.PictureUtil;
-import ftnt.qa.autotest.ui.framework.utils.PropertiesUtil;
+import ftnt.qa.autotest.ui.framework.utils.ZipUtil;
 
-public abstract  class TestBase implements ITestBase {
+public abstract class TestBase implements ITestBase {
+	private static final Logger logger = LoggerFactory.getLogger(TestBase.class);
 	protected static WebDriver webDriver;
 	protected static String browserType;
-	public static boolean success = true;
-	protected static int retryMaxCount = RetryToRunCase.getMaxRetryCount();
-	protected static int reTryCount = 1;
 
-	/**
-	 * @author Lei.Wu
-	 * @see 
-	 */
 	@BeforeSuite(alwaysRun = true)
-	public void initTest(XmlTest xt,ITestContext tc) throws Exception {
-		System.setProperty(CommonConstants.CONFIG_FOLDER_PATH_KEY, CommonConstants.CONFIG_FOLDER_PATH_VALUE);
-		if (null == PropertiesUtil.getProKVMap()) {
-			new InitPropertiesUtil();
-		}
-		PictureUtil.setBaseUrl(System.getProperty("user.dir") + PropertiesUtil.getProValue("testcase.testpic.path"));
-		browserType = PropertiesUtil.getProValue(PropertiesKeys.BROWSER_TYPE).toString();
+	public void initTest(XmlTest xt, ITestContext tc) throws Exception {
+		browserType = CommonsPropertiesUtils.ReadSinglePropertiesWithValue("framework.properties", "Browser.Type",
+				"ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver");
+		logger.info("#####开始执行测试用例#####");
 	}
 
-	/**
-	 * @author Lei.Wu
-	 * @see 测试方法执行结束后清理测试环境
-	 */
+	@AfterSuite
+	public void terminTestSuite(XmlTest xt, ITestContext tc) throws Exception {
+		
+
+		logger.info("#####全部测试用例执行完毕#####");
+	}
+
+	@BeforeClass()
+	public void beforeClass(XmlTest xt, ITestContext tc) throws Exception {
+		logger.info("############################################################");
+		logger.info("#####BeforeClass:开始执行测试类:" + this.getClass().getName()+ " 执行开始");
+		logger.info("#####");
+		logger.info("#####测试开始时间：" + tc.getStartDate());
+	}
+
+	@AfterClass()
+	public void afterClass(XmlTest xt, ITestContext tc) throws Exception {
+		logger.info("#####");
+		logger.info("#####@AfterClass:执行结束测试类：" + this.getClass().getName() + " 执行完毕");
+		logger.info("############################################################"+"\n");
+
+	}
+
+	@BeforeMethod
+	public void initDriver(ITestContext tc, Method m, XmlTest xt) throws Exception {
+		webDriver = new DriverFactory().getDriver(browserType);
+		TestNGListener.setDriver(webDriver);// 配置监听开启
+		preCondition();
+	}
+
 	@AfterMethod
-	public void cleanEnv(ITestResult rs,XmlTest xt,Method m,ITestContext tc) throws Exception {
+	public void cleanEnv(ITestResult rs, XmlTest xt, Method m, ITestContext tc) throws Exception {
 		try {
 			if (!rs.isSuccess()) {
-				if (reTryCount <= retryMaxCount) {
-					success = false;
-				}
 				Throwable throwable = rs.getThrowable();
-				System.out.println("=====测试用例: " + rs.getMethod().getMethodName() + " 运行失败，原因： "
-						+ throwable.getMessage() + "=====");
+				logger.info("=====测试用例: " + rs.getMethod().getMethodName() + " 运行失败，原因： " + throwable.getMessage()
+						+ "=====");
 				StackTraceElement[] se = throwable.getStackTrace();
-				System.out.println("堆栈信息:");
+				logger.info("堆栈信息:");
 				for (StackTraceElement e : se) {
-					System.out.println(e.toString());
+					logger.info(e.toString());
 				}
 			} else {
-				reTryCount = 1;
-				System.out.println("=====测试用例: " + rs.getMethod().getMethodName() + " 运行成功=====");
+				logger.info("=====测试方法: " + rs.getMethod().getMethodName() + " 运行成功=====");
 			}
 			webDriver.close();
 			webDriver.quit();
@@ -70,17 +95,17 @@ public abstract  class TestBase implements ITestBase {
 		} finally {
 			ExcuteBatCommand.executeBatFile(CommonConstants.KILL_DRIVER_PROCESS_BAT);
 		}
+		Thread.sleep(2000);
 	}
 
 	public void preCondition() throws Exception {
-		String website = "";
+		String website = CommonsPropertiesUtils.ReadSingleProperties("fortisiem.properties", "aoip");
 		displayTipInfo(website);
 		configDriver();
 		openTargetWebSit(website);
 	}
 
 	private void configDriver() throws Exception {
-		webDriver = new DriverFactory().getDriver(browserType);
 		webDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		webDriver.manage().window().maximize();
 		webDriver.manage().timeouts().pageLoadTimeout(1000, TimeUnit.SECONDS);
@@ -88,19 +113,13 @@ public abstract  class TestBase implements ITestBase {
 
 	@SuppressWarnings("unused")
 	private void displayTipInfo(String website) {
-		if (!success) {
-			System.out.println("\n=======测试用例准备重试=======");
-			reTryCount++;
-			success = true;
-		}
-		System.out.println("\n======测试用例: " + " 开始执行======" + "\n===测试用例运行的浏览器类型：" + browserType + " ==="
-				+ "\n测试网站地址: " + website);
+		logger.info("\n"+"=====测试用例运行的浏览器类型：" + browserType + "\n"+"=====测试网站地址: " + website);
 
 	}
 
 	private void openTargetWebSit(String website) {
 		if (CookiesUtil.getCk() != null) {
-			webDriver.manage().timeouts().pageLoadTimeout(3, TimeUnit.SECONDS);
+			webDriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			try {
 				webDriver.get(website);
 			} catch (Exception e) {

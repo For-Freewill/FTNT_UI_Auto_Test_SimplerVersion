@@ -1,0 +1,3 @@
+keys=cn,com,org,uk,edu,jp,hk
+keys2=cn#com#org,uk
+Browser.Type=ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
