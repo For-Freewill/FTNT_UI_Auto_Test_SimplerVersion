@@ -45,8 +45,6 @@ public abstract class TestBase implements ITestBase {
 
 	@AfterSuite
 	public void terminTestSuite(XmlTest xt, ITestContext tc) throws Exception {
-		
-
 		logger.info("#####全部测试用例执行完毕#####");
 	}
 
@@ -86,7 +84,7 @@ public abstract class TestBase implements ITestBase {
 					logger.info(e.toString());
 				}
 			} else {
-				logger.info("=====测试方法: " + rs.getMethod().getMethodName() + " 运行成功=====");
+				logger.info("#####测试方法: " + rs.getMethod().getMethodName() + " 运行成功");
 			}
 			webDriver.close();
 			webDriver.quit();
@@ -94,6 +92,7 @@ public abstract class TestBase implements ITestBase {
 			e.printStackTrace();
 		} finally {
 			ExcuteBatCommand.executeBatFile(CommonConstants.KILL_DRIVER_PROCESS_BAT);
+			logger.info("#####AfterMethod:清理浏览器进程完毕");
 		}
 		Thread.sleep(2000);
 	}
@@ -113,7 +112,8 @@ public abstract class TestBase implements ITestBase {
 
 	@SuppressWarnings("unused")
 	private void displayTipInfo(String website) {
-		logger.info("\n"+"=====测试用例运行的浏览器类型：" + browserType + "\n"+"=====测试网站地址: " + website);
+		logger.info("#####BeforeMethod:测试用例运行的浏览器类型：" + browserType);
+		logger.info("#####BeforeMethod:测试网址 " + website);
 
 	}
 

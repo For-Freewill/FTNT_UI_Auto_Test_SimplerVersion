@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="3"
-           time="0.002">
+           time="0.004">
   <properties />
-            <testcase name="function2" time="0.000" classname="ftnt.qa.autotest.ui.fortisiem.pageobject.testBase">
+            <testcase name="function2" time="0.001" classname="ftnt.qa.autotest.ui.fortisiem.pageobject.testBase">
                 <failure type="java.lang.AssertionError"
                   message="expected [true] but found [false]"
               >

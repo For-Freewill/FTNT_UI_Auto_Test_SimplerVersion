@@ -55,7 +55,7 @@ public class TestNGListener extends TestListenerAdapter implements IReporter,IAn
 //		
 //	}
 	
-	@Override //自定义的监听器
+	@Override //自定义的监听器,含有打包测试结果并发送测试邮件的功能
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		SimpleReportListener reportListener=new SimpleReportListener();
 		reportListener.generateReport(xmlSuites, suites, outputDirectory);
