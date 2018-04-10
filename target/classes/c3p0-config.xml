@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<c3p0-config>  
+    <!-- 默认配置，只可以出现一次 -->  
+    <default-config>  
+	     <!-- 配置JDBC 四个基本属性 -->
+         <property name ="driverClass">org.postgresql.Driver</property >
+         <property name ="jdbcUrl">jdbc:postgresql://10.30.2.171:5432/phoenixdb</property >
+         <property name ="user">phoenix</property>
+         <property name ="password">J23lMBSo5DQ!</property>
+         <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+        <property name="acquireIncrement">5</property>
+　　               <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">5</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">2</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">50</property>
+    </default-config>   
+</c3p0-config>

@@ -3,6 +3,7 @@ package ftnt.qa.autotest.ui.testbase;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.sql.Connection;
 import java.sql.Date;
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
@@ -23,6 +24,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.xml.XmlTest;
 
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
+import ftnt.qa.autotest.ui.framework.db.CommonsDButil;
 import ftnt.qa.autotest.ui.framework.testng.listener.TestNGListener;
 import ftnt.qa.autotest.ui.framework.utils.CommonsPropertiesUtils;
 import ftnt.qa.autotest.ui.framework.utils.CookiesUtil;
