@@ -29,8 +29,8 @@ public interface ITestBase {
 	@BeforeClass
 	public void beforeClass(XmlTest xt, ITestContext tc) throws Exception;
 
-//	@AfterClass
-//	public void afterClass(XmlTest xt, ITestContext tc) throws Exception;
+	@AfterClass
+	public void afterClass(XmlTest xt, ITestContext tc) throws Exception;
 //
 //	@BeforeTest
 //	public void beforeTest(XmlTest xt, ITestContext tc) throws Exception;
@@ -41,6 +41,6 @@ public interface ITestBase {
 	@BeforeMethod
 	public void initDriver(ITestContext tc, Method m, XmlTest xt) throws Exception;
 
-//	@AfterMethod
-//	public void cleanEnv(ITestResult rs, XmlTest xt, Method m, ITestContext tc) throws Exception;
+	@AfterMethod
+	public void cleanEnv(ITestResult rs, XmlTest xt, Method m, ITestContext tc) throws Exception;
 }

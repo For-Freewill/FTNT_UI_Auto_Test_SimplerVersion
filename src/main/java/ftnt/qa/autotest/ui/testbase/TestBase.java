@@ -1,15 +1,8 @@
 package ftnt.qa.autotest.ui.testbase;
 
-import java.io.File;
-import java.io.IOException;
 import java.lang.reflect.Method;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.configuration.ConfigurationException;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,14 +17,10 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.xml.XmlTest;
 
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
-import ftnt.qa.autotest.ui.framework.db.CommonsDButil;
 import ftnt.qa.autotest.ui.framework.testng.listener.TestNGListener;
 import ftnt.qa.autotest.ui.framework.utils.CommonsPropertiesUtils;
 import ftnt.qa.autotest.ui.framework.utils.CookiesUtil;
-import ftnt.qa.autotest.ui.framework.utils.DateUtil;
-import ftnt.qa.autotest.ui.framework.utils.EmailUtil;
 import ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand;
-import ftnt.qa.autotest.ui.framework.utils.ZipUtil;
 
 public abstract class TestBase implements ITestBase {
 	private static final Logger logger = LoggerFactory.getLogger(TestBase.class);

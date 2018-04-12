@@ -4,7 +4,7 @@
            failures="1"
            errors="0"
            skipped="3"
-           time="0.005">
+           time="0.003">
   <properties />
             <testcase name="function2" time="0.000" classname="ftnt.qa.autotest.ui.fortisiem.pageobject.testBase">
                 <failure type="java.lang.AssertionError"
@@ -15,7 +15,7 @@
   org.testng.Assert.failNotEquals(Assert.java:776)
   org.testng.Assert.assertTrue(Assert.java:44)
   org.testng.Assert.assertTrue(Assert.java:54)
-  ftnt.qa.autotest.ui.fortisiem.pageobject.testBase.function2(testBase.java:37)
+  ftnt.qa.autotest.ui.fortisiem.pageobject.testBase.function2(testBase.java:20)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

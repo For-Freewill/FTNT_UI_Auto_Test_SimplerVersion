@@ -4,8 +4,8 @@ import org.apache.log4j.Logger;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
-import ftnt.qa.autotest.ui.testbase.TestBase;
 
 
 /**

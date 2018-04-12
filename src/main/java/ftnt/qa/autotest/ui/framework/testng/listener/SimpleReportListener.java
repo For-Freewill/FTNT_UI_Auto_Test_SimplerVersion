@@ -18,7 +18,6 @@ import ftnt.qa.autotest.ui.framework.utils.CommonsPropertiesUtils;
 import ftnt.qa.autotest.ui.framework.utils.DateUtil;
 import ftnt.qa.autotest.ui.framework.utils.EmailUtil;
 import ftnt.qa.autotest.ui.framework.utils.ZipUtil;
-import ftnt.qa.autotest.ui.testbase.TestBase;
 
 /**
  * 自定义报表监听器
