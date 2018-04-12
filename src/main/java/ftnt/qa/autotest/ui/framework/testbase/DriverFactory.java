@@ -1,4 +1,4 @@
-package ftnt.qa.autotest.ui.testbase;
+package ftnt.qa.autotest.ui.framework.testbase;
 
 
 import ftnt.qa.autotest.ui.framework.interfaces.IBrowserDriverBase;

@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
-import ftnt.qa.autotest.ui.testbase.TestBase;
+import ftnt.qa.autotest.ui.framework.testbase.TestBase;
 
 public class ExcuteBatCommand {
 	private static final Logger logger = LoggerFactory.getLogger(ExcuteBatCommand.class);

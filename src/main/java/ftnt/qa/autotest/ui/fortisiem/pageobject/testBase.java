@@ -3,7 +3,7 @@ package ftnt.qa.autotest.ui.fortisiem.pageobject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import ftnt.qa.autotest.ui.testbase.TestBase;
+import ftnt.qa.autotest.ui.framework.testbase.TestBase;
 //@Listeners({ftnt.qa.autotest.ui.framework.testng.listener.ScreenShotListener.class,
 //	ftnt.qa.autotest.ui.framework.testng.listener.RetryListener.class,
 //	ftnt.qa.autotest.ui.framework.testng.listener.ReportListener.class})
