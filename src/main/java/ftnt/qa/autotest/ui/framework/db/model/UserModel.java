@@ -1,6 +1,6 @@
-package ftnt.qa.autotest.ui.framework.db;
+package ftnt.qa.autotest.ui.framework.db.model;
 
-public class User {
+public class UserModel {
 	private String id;
 	private String creation_time;
 	private String cust_org_id;
@@ -35,7 +35,7 @@ public class User {
 	private String manager_id;
 	private String employee_id;
 	
-	public User() {
+	public UserModel() {
 		super();
 	}
 	public String getId() {
@@ -285,7 +285,7 @@ public class User {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		UserModel other = (UserModel) obj;
 		if (active == null) {
 			if (other.active != null)
 				return false;

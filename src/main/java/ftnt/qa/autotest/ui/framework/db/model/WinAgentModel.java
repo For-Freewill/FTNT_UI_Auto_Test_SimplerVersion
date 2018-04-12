@@ -1,6 +1,6 @@
-package ftnt.qa.autotest.ui.framework.db;
+package ftnt.qa.autotest.ui.framework.db.model;
 
-public class WinAgent {
+public class WinAgentModel {
 	private String id;
 	private String collector_id;
 	private String creation_time;
@@ -22,7 +22,7 @@ public class WinAgent {
 	private String win_agent_id;
 	private String collector_ids;
 	
-	public WinAgent(String name, Boolean registered, Boolean status) {
+	public WinAgentModel(String name, Boolean registered, Boolean status) {
 		super();
 		this.name = name;
 		this.registered = registered;

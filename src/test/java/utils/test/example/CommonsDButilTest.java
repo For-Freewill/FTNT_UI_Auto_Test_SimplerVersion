@@ -6,7 +6,7 @@ import java.util.Map;
 
 import ftnt.qa.autotest.ui.framework.db.CommonsDButil;
 import ftnt.qa.autotest.ui.framework.db.CommonsRSDButil;
-import ftnt.qa.autotest.ui.framework.db.DeviceTable;
+import ftnt.qa.autotest.ui.framework.db.model.DeviceModel;
 
 //* ArrayHandler：把结果集中的第一行数据转成对象数组。
 //* ArrayListHandler：把结果集中的每一行数据都转成一个数组，再存放到List中。
@@ -48,17 +48,17 @@ public class CommonsDButilTest {
 		}
 
 		// BeanHandler：将结果集中的第一行数据封装到一个对应的JavaBean实例中.
-		DeviceTable deviceTable = (DeviceTable) CommonsDButil.queryBean(DeviceTable.class,
+		DeviceModel deviceTable = (DeviceModel) CommonsDButil.queryBean(DeviceModel.class,
 				"select access_ip,discover_method,unmanaged from ph_device where access_ip!=? and discover_method=?",
 				"10.30.2.173", "LOG");
 		System.out.println("BeanHandler：将结果集中的第一行数据封装到一个对应的JavaBean实例中." + deviceTable.getAccess_ip()
 				+ deviceTable.getUnmanaged());
 
 		// BeanListHandler：将结果集中的每一行数据都封装到一个对应的JavaBean实例中，存放到List里。
-		List<DeviceTable> deviceTables = (List<DeviceTable>) CommonsDButil.queryBeanList(DeviceTable.class,
+		List<DeviceModel> deviceTables = (List<DeviceModel>) CommonsDButil.queryBeanList(DeviceModel.class,
 				"select access_ip,discover_method,unmanaged from ph_device where access_ip!=? and discover_method=? LIMIT 2",
 				"10.30.2.173", "LOG");
-		for (DeviceTable deviceTable1 : deviceTables) {
+		for (DeviceModel deviceTable1 : deviceTables) {
 			System.out.println("BeanListHandler：将结果集中的每一行数据都封装到一个对应的JavaBean实例中，存放到List里。" + deviceTable1.getAccess_ip()
 					+ deviceTable1.getUnmanaged());
 		}

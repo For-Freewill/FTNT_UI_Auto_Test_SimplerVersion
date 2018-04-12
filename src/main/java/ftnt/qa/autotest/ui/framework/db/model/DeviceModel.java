@@ -1,6 +1,6 @@
-package ftnt.qa.autotest.ui.framework.db;
+package ftnt.qa.autotest.ui.framework.db.model;
 
-public class DeviceTable {
+public class DeviceModel {
 	private String id;
 	private String creation_time;
 	private String cust_org_id;
@@ -30,7 +30,7 @@ public class DeviceTable {
 	private String os_edition;
 	private Boolean unmanaged;
 	
-	public DeviceTable() {
+	public DeviceModel() {
 		super();
 	}
 	
