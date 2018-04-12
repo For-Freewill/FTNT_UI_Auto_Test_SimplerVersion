@@ -237,6 +237,222 @@ public class User {
 		this.employee_id = employee_id;
 	}
 	
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((active == null) ? 0 : active.hashCode());
+		result = prime * result + ((authen_profiles == null) ? 0 : authen_profiles.hashCode());
+		result = prime * result + ((authen_profiles_2 == null) ? 0 : authen_profiles_2.hashCode());
+		result = prime * result + ((collector_id == null) ? 0 : collector_id.hashCode());
+		result = prime * result + ((company == null) ? 0 : company.hashCode());
+		result = prime * result + ((creation_time == null) ? 0 : creation_time.hashCode());
+		result = prime * result + ((cust_org_id == null) ? 0 : cust_org_id.hashCode());
+		result = prime * result + ((description == null) ? 0 : description.hashCode());
+		result = prime * result + ((dn == null) ? 0 : dn.hashCode());
+		result = prime * result + ((effective_cust_id == null) ? 0 : effective_cust_id.hashCode());
+		result = prime * result + ((employee_id == null) ? 0 : employee_id.hashCode());
+		result = prime * result + ((entity_version == null) ? 0 : entity_version.hashCode());
+		result = prime * result + ((full_name == null) ? 0 : full_name.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((inactivity_timeout == null) ? 0 : inactivity_timeout.hashCode());
+		result = prime * result + ((job_title == null) ? 0 : job_title.hashCode());
+		result = prime * result + ((last_login == null) ? 0 : last_login.hashCode());
+		result = prime * result + ((last_modified_time == null) ? 0 : last_modified_time.hashCode());
+		result = prime * result + ((ldap_domain == null) ? 0 : ldap_domain.hashCode());
+		result = prime * result + ((local_authen == null) ? 0 : local_authen.hashCode());
+		result = prime * result + ((lockout_duration == null) ? 0 : lockout_duration.hashCode());
+		result = prime * result + ((manager_id == null) ? 0 : manager_id.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((natural_id == null) ? 0 : natural_id.hashCode());
+		result = prime * result + ((owner_id == null) ? 0 : owner_id.hashCode());
+		result = prime * result + ((passwd_age_days == null) ? 0 : passwd_age_days.hashCode());
+		result = prime * result + ((passwd_last_set == null) ? 0 : passwd_last_set.hashCode());
+		result = prime * result + ((password_reset_duration == null) ? 0 : password_reset_duration.hashCode());
+		result = prime * result + ((prime_profile_id == null) ? 0 : prime_profile_id.hashCode());
+		result = prime * result + ((privileged == null) ? 0 : privileged.hashCode());
+		result = prime * result + ((rbac_profile_name == null) ? 0 : rbac_profile_name.hashCode());
+		result = prime * result + ((user_acct_control == null) ? 0 : user_acct_control.hashCode());
+		result = prime * result + ((user_weight == null) ? 0 : user_weight.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (active == null) {
+			if (other.active != null)
+				return false;
+		} else if (!active.equals(other.active))
+			return false;
+		if (authen_profiles == null) {
+			if (other.authen_profiles != null)
+				return false;
+		} else if (!authen_profiles.equals(other.authen_profiles))
+			return false;
+		if (authen_profiles_2 == null) {
+			if (other.authen_profiles_2 != null)
+				return false;
+		} else if (!authen_profiles_2.equals(other.authen_profiles_2))
+			return false;
+		if (collector_id == null) {
+			if (other.collector_id != null)
+				return false;
+		} else if (!collector_id.equals(other.collector_id))
+			return false;
+		if (company == null) {
+			if (other.company != null)
+				return false;
+		} else if (!company.equals(other.company))
+			return false;
+		if (creation_time == null) {
+			if (other.creation_time != null)
+				return false;
+		} else if (!creation_time.equals(other.creation_time))
+			return false;
+		if (cust_org_id == null) {
+			if (other.cust_org_id != null)
+				return false;
+		} else if (!cust_org_id.equals(other.cust_org_id))
+			return false;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (dn == null) {
+			if (other.dn != null)
+				return false;
+		} else if (!dn.equals(other.dn))
+			return false;
+		if (effective_cust_id == null) {
+			if (other.effective_cust_id != null)
+				return false;
+		} else if (!effective_cust_id.equals(other.effective_cust_id))
+			return false;
+		if (employee_id == null) {
+			if (other.employee_id != null)
+				return false;
+		} else if (!employee_id.equals(other.employee_id))
+			return false;
+		if (entity_version == null) {
+			if (other.entity_version != null)
+				return false;
+		} else if (!entity_version.equals(other.entity_version))
+			return false;
+		if (full_name == null) {
+			if (other.full_name != null)
+				return false;
+		} else if (!full_name.equals(other.full_name))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (inactivity_timeout == null) {
+			if (other.inactivity_timeout != null)
+				return false;
+		} else if (!inactivity_timeout.equals(other.inactivity_timeout))
+			return false;
+		if (job_title == null) {
+			if (other.job_title != null)
+				return false;
+		} else if (!job_title.equals(other.job_title))
+			return false;
+		if (last_login == null) {
+			if (other.last_login != null)
+				return false;
+		} else if (!last_login.equals(other.last_login))
+			return false;
+		if (last_modified_time == null) {
+			if (other.last_modified_time != null)
+				return false;
+		} else if (!last_modified_time.equals(other.last_modified_time))
+			return false;
+		if (ldap_domain == null) {
+			if (other.ldap_domain != null)
+				return false;
+		} else if (!ldap_domain.equals(other.ldap_domain))
+			return false;
+		if (local_authen == null) {
+			if (other.local_authen != null)
+				return false;
+		} else if (!local_authen.equals(other.local_authen))
+			return false;
+		if (lockout_duration == null) {
+			if (other.lockout_duration != null)
+				return false;
+		} else if (!lockout_duration.equals(other.lockout_duration))
+			return false;
+		if (manager_id == null) {
+			if (other.manager_id != null)
+				return false;
+		} else if (!manager_id.equals(other.manager_id))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (natural_id == null) {
+			if (other.natural_id != null)
+				return false;
+		} else if (!natural_id.equals(other.natural_id))
+			return false;
+		if (owner_id == null) {
+			if (other.owner_id != null)
+				return false;
+		} else if (!owner_id.equals(other.owner_id))
+			return false;
+		if (passwd_age_days == null) {
+			if (other.passwd_age_days != null)
+				return false;
+		} else if (!passwd_age_days.equals(other.passwd_age_days))
+			return false;
+		if (passwd_last_set == null) {
+			if (other.passwd_last_set != null)
+				return false;
+		} else if (!passwd_last_set.equals(other.passwd_last_set))
+			return false;
+		if (password_reset_duration == null) {
+			if (other.password_reset_duration != null)
+				return false;
+		} else if (!password_reset_duration.equals(other.password_reset_duration))
+			return false;
+		if (prime_profile_id == null) {
+			if (other.prime_profile_id != null)
+				return false;
+		} else if (!prime_profile_id.equals(other.prime_profile_id))
+			return false;
+		if (privileged == null) {
+			if (other.privileged != null)
+				return false;
+		} else if (!privileged.equals(other.privileged))
+			return false;
+		if (rbac_profile_name == null) {
+			if (other.rbac_profile_name != null)
+				return false;
+		} else if (!rbac_profile_name.equals(other.rbac_profile_name))
+			return false;
+		if (user_acct_control == null) {
+			if (other.user_acct_control != null)
+				return false;
+		} else if (!user_acct_control.equals(other.user_acct_control))
+			return false;
+		if (user_weight == null) {
+			if (other.user_weight != null)
+				return false;
+		} else if (!user_weight.equals(other.user_weight))
+			return false;
+		return true;
+	}
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + "]";

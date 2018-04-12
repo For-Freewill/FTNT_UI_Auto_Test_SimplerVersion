@@ -18,8 +18,8 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.apache.log4j.Logger;
 
 /**
- * @ClassName: CommonsDButil
- * @Description:操作FSM的基本数据库，使用dbutils框架的QueryRunner类完成CRUD
+ * @ClassName: CommonsRSDButil
+ * @Description:操作ReportServer，使用dbutils框架的QueryRunner类完成CRUD
  * @author Wulei
  * @date 2018-4-10
  */
@@ -34,15 +34,15 @@ import org.apache.log4j.Logger;
 // * MapHandler：将结果集中的第一行数据封装到一个Map里，key是列名，value就是对应的值。
 // * MapListHandler：将结果集中的每一行数据都封装到一个Map里，然后再存放到List
  
-public class CommonsDButil {
+public class CommonsRSDButil {
 	private static final QueryRunner runner = new QueryRunner();
-	private static final Logger logger = Logger.getLogger(CommonsDButil.class);
+	private static final Logger logger = Logger.getLogger(CommonsRSDButil.class);
 
 	//获取数据库连接，获取的是c3p0的连接
 	public static Connection openConnection() {
 		Connection conn = null;
 		try {
-			conn = C3p0Util.getConnection();
+			conn = RSC3p0Util.getConnection();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

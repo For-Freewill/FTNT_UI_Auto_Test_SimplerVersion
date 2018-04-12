@@ -10,19 +10,31 @@ Class-Path: lib/selenium-java-3.11.0.jar lib/selenium-api-3.11.0.jar l
  ual-2.0.0.jar lib/error_prone_annotations-2.1.3.jar lib/j2objc-annota
  tions-1.1.jar lib/animal-sniffer-annotations-1.14.jar lib/httpclient-
  4.5.3.jar lib/httpcore-4.4.6.jar lib/okhttp-3.9.1.jar lib/okio-1.13.0
- .jar lib/selenium-remote-driver-3.11.0.jar lib/guice-4.2.0.jar lib/ja
- vax.inject-1.jar lib/aopalliance-1.0.jar lib/velocity-1.7.jar lib/com
- mons-collections-3.2.1.jar lib/commons-lang-2.4.jar lib/commons-confi
- guration-1.10.jar lib/commons-codec-1.11.jar lib/commons-beanutils-1.
- 9.3.jar lib/commons-compress-1.15.jar lib/objenesis-2.6.jar lib/commo
- ns-email-1.5.jar lib/javax.mail-1.5.6.jar lib/activation-1.1.jar lib/
- commons-io-2.6.jar lib/commons-dbutils-1.7.jar lib/Excel4J-2.1.2.jar 
- lib/poi-3.17.jar lib/commons-collections4-4.1.jar lib/poi-ooxml-3.17.
- jar lib/poi-ooxml-schemas-3.17.jar lib/xmlbeans-2.6.0.jar lib/stax-ap
- i-1.0.1.jar lib/curvesapi-1.04.jar lib/mysql-connector-java-6.0.6.jar
-  lib/postgresql-42.2.2.jar lib/c3p0-0.9.1.2.jar lib/slf4j-api-1.6.6.j
- ar lib/jcl-over-slf4j-1.6.6.jar lib/slf4j-log4j12-1.6.6.jar lib/log4j
- -1.2.15.jar lib/dom4j-1.6.1.jar lib/xml-apis-1.0.b2.jar
+ .jar lib/selenium-server-3.11.0.jar lib/jcommander-1.72.jar lib/commo
+ ns-lang3-3.7.jar lib/commons-text-1.1.jar lib/commons-net-3.6.jar lib
+ /sac-1.3.jar lib/cssparser-0.9.24.jar lib/htmlunit-2.29.jar lib/htmlu
+ nit-core-js-2.28.jar lib/neko-htmlunit-2.28.jar lib/httpmime-4.5.3.ja
+ r lib/jcip-annotations-1.0.jar lib/jetty-repacked-9.4.7.v20171121.jar
+  lib/jetty-client-9.4.7.v20170914.jar lib/jetty-http-9.4.8.v20171121.
+ jar lib/jetty-io-9.4.8.v20171121.jar lib/jetty-util-9.4.8.v20171121.j
+ ar lib/jetty-xml-9.4.7.v20170914.jar lib/htmlunit-driver-2.29.0.jar l
+ ib/javax.servlet-api-3.1.0.jar lib/websocket-api-9.4.7.v20170914.jar 
+ lib/websocket-client-9.4.7.v20170914.jar lib/websocket-common-9.4.7.v
+ 20170914.jar lib/serializer-2.7.2.jar lib/xalan-2.7.2.jar lib/xercesI
+ mpl-2.11.0.jar lib/xml-apis-1.4.01.jar lib/snakeyaml-1.19.jar lib/sel
+ enium-remote-driver-3.11.0.jar lib/guice-4.2.0.jar lib/javax.inject-1
+ .jar lib/aopalliance-1.0.jar lib/velocity-1.7.jar lib/commons-collect
+ ions-3.2.1.jar lib/commons-lang-2.4.jar lib/commons-configuration-1.1
+ 0.jar lib/commons-codec-1.11.jar lib/commons-beanutils-1.9.3.jar lib/
+ commons-compress-1.15.jar lib/objenesis-2.6.jar lib/commons-email-1.5
+ .jar lib/javax.mail-1.5.6.jar lib/activation-1.1.jar lib/commons-io-2
+ .6.jar lib/commons-dbutils-1.7.jar lib/Excel4J-2.1.2.jar lib/poi-3.17
+ .jar lib/commons-collections4-4.1.jar lib/poi-ooxml-3.17.jar lib/poi-
+ ooxml-schemas-3.17.jar lib/xmlbeans-2.6.0.jar lib/stax-api-1.0.1.jar 
+ lib/curvesapi-1.04.jar lib/mysql-connector-java-6.0.6.jar lib/postgre
+ sql-42.2.2.jar lib/c3p0-0.9.1.2.jar lib/slf4j-api-1.6.6.jar lib/jcl-o
+ ver-slf4j-1.6.6.jar lib/slf4j-log4j12-1.6.6.jar lib/log4j-1.2.15.jar 
+ lib/dom4j-1.6.1.jar
 Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 Main-Class: ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2

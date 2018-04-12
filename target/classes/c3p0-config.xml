@@ -1,19 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<c3p0-config>  
-    <!-- 默认配置，只可以出现一次 -->  
-    <default-config>  
-	     <!-- 配置JDBC 四个基本属性 -->
-         <property name ="driverClass">org.postgresql.Driver</property >
-         <property name ="jdbcUrl">jdbc:postgresql://10.30.2.171:5432/phoenixdb</property >
-         <property name ="user">phoenix</property>
-         <property name ="password">J23lMBSo5DQ!</property>
-         <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
-        <property name="acquireIncrement">5</property>
-　　               <!-- 初始化数据库连接池时连接的数量 -->
-        <property name="initialPoolSize">5</property>
-        <!-- 数据库连接池中的最小的数据库连接数 -->
-        <property name="minPoolSize">2</property>
-        <!-- 数据库连接池中的最大的数据库连接数 -->
-        <property name="maxPoolSize">50</property>
-    </default-config>   
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- FSM AO PostgreSQL配置 -->
+	<default-config>
+		<!-- 配置JDBC 四个基本属性 -->
+		<property name="driverClass">org.postgresql.Driver</property>
+		<property name="jdbcUrl">jdbc:postgresql://10.30.2.171:5432/phoenixdb
+		</property>
+		<property name="user">phoenix</property>
+		<property name="password">J23lMBSo5DQ!</property>
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 初始化数据库连接池时连接的数量 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 数据库连接池中的最小的数据库连接数 -->
+		<property name="minPoolSize">2</property>
+		<!-- 数据库连接池中的最大的数据库连接数 -->
+		<property name="maxPoolSize">50</property>
+	</default-config>
+
+	<!-- FSM RS PostgreSQL配置 -->
+	<named-config name="reportserver">
+		<property name="driverClass">org.postgresql.Driver</property>
+		<property name="jdbcUrl">jdbc:postgresql://10.30.2.127:30000/reportdb
+		</property>
+		<property name="user">test</property>
+		<property name="password">test*1</property>
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 初始化数据库连接池时连接的数量 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 数据库连接池中的最小的数据库连接数 -->
+		<property name="minPoolSize">2</property>
+		<!-- 数据库连接池中的最大的数据库连接数 -->
+		<property name="maxPoolSize">50</property>
+	</named-config>
+
+	<!-- 备用MySQL配置 -->
+	<named-config name="mysql">
+		<!-- 配置JDBC 四个基本属性 -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://10.30.2.17:3306/test_wsl
+		</property>
+		<property name="user">root</property>
+		<property name="password">123123</property>
+		<!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 初始化数据库连接池时连接的数量 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 数据库连接池中的最小的数据库连接数 -->
+		<property name="minPoolSize">2</property>
+		<!-- 数据库连接池中的最大的数据库连接数 -->
+		<property name="maxPoolSize">50</property>
+	</named-config>
 </c3p0-config>
