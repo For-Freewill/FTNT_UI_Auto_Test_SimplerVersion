@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2">
+        <methods>
+          <include name="initTest"/>
+          <include name="initDriver"/>
+          <include name="test1"/>
+          <include name="cleanEnv"/>
+          <include name="afterClass"/>
+          <include name="terminTestSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

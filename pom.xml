@@ -224,7 +224,13 @@
 				<directory>BrowserDriver</directory>
 				<targetPath>${project.build.directory}/BrowserDriver</targetPath>
 			</resource>
-
+			
+			<!-- 控制浏览器驱动文件目录复制到target/BrowserDriver 目录 ，必须设置 -->
+			<resource>
+				<directory>TestData</directory>
+				<targetPath>${project.build.directory}/TestData</targetPath>
+			</resource>
+			
 			<!-- 控制TestNG-output的拷贝target/TestNG-output 目录，这个是用于maven执行时的打包 -->
 			<resource>
 				<directory>TestNG-output</directory>

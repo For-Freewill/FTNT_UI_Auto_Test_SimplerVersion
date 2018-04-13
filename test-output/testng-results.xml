@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="38186" started-at="2018-04-13T08:13:51Z" finished-at="2018-04-13T08:14:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="38186" started-at="2018-04-13T08:13:51Z" finished-at="2018-04-13T08:14:29Z">
+      <class name="ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2">
+        <test-method status="PASS" signature="initTest(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2]" name="initTest" is-config="true" duration-ms="51" started-at="2018-04-13T08:13:51Z" finished-at="2018-04-13T08:13:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@f49941ba]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@332a7fce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="beforeClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2]" name="beforeClass" is-config="true" duration-ms="3" started-at="2018-04-13T08:13:51Z" finished-at="2018-04-13T08:13:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@f49941ba]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@332a7fce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2]" name="initDriver" is-config="true" duration-ms="4215" started-at="2018-04-13T08:13:51Z" finished-at="2018-04-13T08:13:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@332a7fce]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2.test1() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@f49941ba]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2]" name="test1" duration-ms="27484" started-at="2018-04-13T08:13:55Z" finished-at="2018-04-13T08:14:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2]" name="cleanEnv" is-config="true" duration-ms="6463" started-at="2018-04-13T08:14:22Z" finished-at="2018-04-13T08:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=testBase2.test1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@f49941ba]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2.test1() throws java.lang.Exception]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[org.testng.TestRunner@332a7fce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanEnv -->
+        <test-method status="PASS" signature="afterClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2]" name="afterClass" is-config="true" duration-ms="3" started-at="2018-04-13T08:14:29Z" finished-at="2018-04-13T08:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@f49941ba]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@332a7fce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="terminTestSuite(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2@176d53b2]" name="terminTestSuite" is-config="true" duration-ms="1" started-at="2018-04-13T08:14:29Z" finished-at="2018-04-13T08:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.xml.XmlTest@f49941ba]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@332a7fce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminTestSuite -->
+      </class> <!-- ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
