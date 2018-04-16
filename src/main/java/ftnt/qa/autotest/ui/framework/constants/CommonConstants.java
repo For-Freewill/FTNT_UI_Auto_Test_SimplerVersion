@@ -21,8 +21,6 @@ public class CommonConstants {
 	public static final String  CONFIG_FOLDER_PATH_VALUE=projPath+"framework.properties";
 	
 	public static final String  KILL_DRIVER_PROCESS_BAT=projPath+"/BrowserDriver/cleanBrowers.bat";
-	
-	public static final String  PROJECT_TEST_OUTPUT=projPath+"framework.properties";
-	
+		
 	public static final String  TESTNG_OUT_PATH = "TestNG-output";
 }

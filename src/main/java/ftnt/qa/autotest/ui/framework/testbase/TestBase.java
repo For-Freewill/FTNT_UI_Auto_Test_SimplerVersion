@@ -121,7 +121,6 @@ public abstract class TestBase implements ITestBase {
 			webDriver.get(website);
 		} catch (Exception e) {
 		}
-		webDriver.manage().timeouts().pageLoadTimeout(-1, TimeUnit.SECONDS);
 	}
 
 	/**

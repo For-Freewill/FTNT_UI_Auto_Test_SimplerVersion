@@ -19,7 +19,7 @@ public class EmailUtil {
 		try {
 			sendMsg("邮件正文为");
 			 String path= "D:\\test1.xlsx";
-			//sendEmailsWithAttachments(path,"测试结果","请查收");
+			sendEmailsWithAttachments(path,"测试结果","请查收");
 		} catch (EmailException e) {
 			e.printStackTrace();
 		}

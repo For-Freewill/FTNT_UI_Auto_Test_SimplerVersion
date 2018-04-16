@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
+import org.testng.xml.XmlTest;
 
 import com.github.crab2died.ExcelUtils;
 
@@ -28,6 +30,7 @@ public class testBase2 extends TestBase {
 		Login loginObj = PageFactory.initElements(driver, Login.class);
         loginObj.login("admin", "admin*1", "super","LOCAL");
 	}
+
 	
 //	@Test
 //	public void test1() throws Exception {

@@ -14,10 +14,6 @@ import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 import org.testng.annotations.ITestAnnotation;
 import org.testng.xml.XmlSuite;
-
-import ftnt.qa.autotest.ui.framework.testng.listener.ReportListener;
-import ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase;
-import ftnt.qa.autotest.ui.framework.testng.listener.ScreenShotOnFailure;
 /**
  * 三大监听器合并实现
  * @see 依赖以下3个类：ReportListener，RetryToRunCase，ScreenShotOnFailure

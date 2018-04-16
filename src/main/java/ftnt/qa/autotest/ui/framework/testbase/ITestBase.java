@@ -31,10 +31,10 @@ public interface ITestBase {
 
 	@AfterClass
 	public void afterClass(XmlTest xt, ITestContext tc) throws Exception;
-//
+
 //	@BeforeTest
 //	public void beforeTest(XmlTest xt, ITestContext tc) throws Exception;
-
+//
 //	@AfterTest
 //	public void afterTest(XmlTest xt, ITestContext tc) throws Exception;
 

@@ -19,4 +19,5 @@ public class testBase extends TestBase {
 	public void function2() {
         Assert.assertTrue(false);
 	}
+
 }

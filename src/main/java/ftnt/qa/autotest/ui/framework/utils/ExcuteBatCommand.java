@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
-import ftnt.qa.autotest.ui.framework.testbase.TestBase;
 
 public class ExcuteBatCommand {
 	private static final Logger logger = LoggerFactory.getLogger(ExcuteBatCommand.class);
@@ -29,7 +28,7 @@ public class ExcuteBatCommand {
         if (i == 0) {
         	logger.info("#####清理浏览器进程成功#####");
         } else {
-            logger.info("#####清理浏览器进程成功#####");
+            logger.info("#####清理浏览器进程失败#####");
         }
 
         ps.destroy();  //销毁子进程
