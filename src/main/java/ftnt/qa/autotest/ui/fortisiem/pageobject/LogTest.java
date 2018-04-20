@@ -1,4 +1,4 @@
-package ftnt.qa.autotest.ui.fortisiem.testcases;
+package ftnt.qa.autotest.ui.fortisiem.pageobject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

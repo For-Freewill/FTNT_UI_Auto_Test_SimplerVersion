@@ -1,4 +1,4 @@
-package ftnt.qa.autotest.ui.fortisiem.pageobject;
+package ftnt.qa.autotest.ui.fortisiem.testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,7 +7,7 @@ import ftnt.qa.autotest.ui.framework.testbase.TestBase;
 //@Listeners({ftnt.qa.autotest.ui.framework.testng.listener.ScreenShotListener.class,
 //	ftnt.qa.autotest.ui.framework.testng.listener.RetryListener.class,
 //	ftnt.qa.autotest.ui.framework.testng.listener.ReportListener.class})
-public class testBase extends TestBase {
+public class User extends TestBase {
 //	@Test
 //	public void function1() throws Exception {
 //		WebDriver driver = TestBase.getWebDriver();

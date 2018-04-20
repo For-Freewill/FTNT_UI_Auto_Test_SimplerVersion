@@ -1,15 +1,173 @@
-2018-04-16 13:57:10 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####开始执行测试用例#####
-2018-04-16 13:57:10 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ############################################################
-2018-04-16 13:57:10 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeClass:开始执行测试类:ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2 执行开始
-2018-04-16 13:57:10 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####
-2018-04-16 13:57:10 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####测试开始时间：Mon Apr 16 13:57:10 CST 2018
-2018-04-16 13:57:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
-2018-04-16 13:57:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试网址 https://10.30.2.171/phoenix/login-html.jsf
-2018-04-16 13:57:22 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####测试方法: function1 运行成功
-2018-04-16 13:57:25 ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand-INFO : #####清理浏览器进程成功#####
-2018-04-16 13:57:25 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####AfterMethod:清理浏览器进程完毕
-2018-04-16 13:57:27 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####
-2018-04-16 13:57:27 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####@AfterClass:执行结束测试类：ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2 执行完毕
-2018-04-16 13:57:27 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ############################################################
+2018-04-20 10:30:50 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####开始执行测试用例#####
+2018-04-20 10:30:50 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ############################################################
+2018-04-20 10:30:50 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeClass:开始执行测试类:ftnt.qa.autotest.ui.fortisiem.testcases.User 执行开始
+2018-04-20 10:30:50 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####
+2018-04-20 10:30:50 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####测试开始时间：Fri Apr 20 10:30:50 CST 2018
+2018-04-20 10:30:54 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
+2018-04-20 10:30:54 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试网址 https://10.30.2.171/phoenix/login-html.jsf
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function2>执行失败，重试第1次
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : =====测试用例: function2 运行失败，原因： expected [true] but found [false]=====
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : 堆栈信息:
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.fail(Assert.java:96)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.failNotEquals(Assert.java:776)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:44)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:54)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : java.lang.reflect.Method.invoke(Method.java:498)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.privateRun(TestRunner.java:648)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.run(TestRunner.java:505)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.run(SuiteRunner.java:364)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuites(TestNG.java:1049)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.run(TestNG.java:1017)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+2018-04-20 10:30:56 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+2018-04-20 10:30:59 ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand-INFO : #####清理浏览器进程成功#####
+2018-04-20 10:30:59 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####AfterMethod:清理浏览器进程完毕
+2018-04-20 10:31:03 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
+2018-04-20 10:31:03 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试网址 https://10.30.2.171/phoenix/login-html.jsf
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function2>执行失败，重试第2次
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : =====测试用例: function2 运行失败，原因： expected [true] but found [false]=====
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : 堆栈信息:
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.fail(Assert.java:96)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.failNotEquals(Assert.java:776)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:44)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:54)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : java.lang.reflect.Method.invoke(Method.java:498)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.privateRun(TestRunner.java:648)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.run(TestRunner.java:505)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.run(SuiteRunner.java:364)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuites(TestNG.java:1049)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.run(TestNG.java:1017)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+2018-04-20 10:31:05 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+2018-04-20 10:31:07 ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand-INFO : #####清理浏览器进程成功#####
+2018-04-20 10:31:07 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####AfterMethod:清理浏览器进程完毕
+2018-04-20 10:31:12 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
+2018-04-20 10:31:12 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试网址 https://10.30.2.171/phoenix/login-html.jsf
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<function2>执行失败，重试第3次
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : =====测试用例: function2 运行失败，原因： expected [true] but found [false]=====
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : 堆栈信息:
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.fail(Assert.java:96)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.failNotEquals(Assert.java:776)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:44)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:54)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : java.lang.reflect.Method.invoke(Method.java:498)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.privateRun(TestRunner.java:648)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.run(TestRunner.java:505)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.run(SuiteRunner.java:364)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuites(TestNG.java:1049)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.run(TestNG.java:1017)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+2018-04-20 10:31:13 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+2018-04-20 10:31:16 ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand-INFO : #####清理浏览器进程成功#####
+2018-04-20 10:31:16 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####AfterMethod:清理浏览器进程完毕
+2018-04-20 10:31:20 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
+2018-04-20 10:31:20 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试网址 https://10.30.2.171/phoenix/login-html.jsf
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : =====测试用例: function2 运行失败，原因： expected [true] but found [false]=====
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : 堆栈信息:
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.fail(Assert.java:96)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.failNotEquals(Assert.java:776)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:44)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.Assert.assertTrue(Assert.java:54)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : java.lang.reflect.Method.invoke(Method.java:498)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.retryFailed(Invoker.java:838)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.privateRun(TestRunner.java:648)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestRunner.run(TestRunner.java:505)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunner.run(SuiteRunner.java:364)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.runSuites(TestNG.java:1049)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.TestNG.run(TestNG.java:1017)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+2018-04-20 10:31:24 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+2018-04-20 10:31:27 ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand-INFO : #####清理浏览器进程成功#####
+2018-04-20 10:31:27 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####AfterMethod:清理浏览器进程完毕
+2018-04-20 10:31:29 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####
+2018-04-20 10:31:29 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####@AfterClass:执行结束测试类：ftnt.qa.autotest.ui.fortisiem.testcases.User 执行完毕
+2018-04-20 10:31:29 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ############################################################
 
-2018-04-16 13:57:27 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####全部测试用例执行完毕#####
+2018-04-20 10:31:29 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ############################################################
+2018-04-20 10:31:29 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeClass:开始执行测试类:ftnt.qa.autotest.ui.fortisiem.testcases.Organization 执行开始
+2018-04-20 10:31:29 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####
+2018-04-20 10:31:29 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####测试开始时间：Fri Apr 20 10:30:50 CST 2018
+2018-04-20 10:31:31 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
+2018-04-20 10:31:31 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####BeforeMethod:测试网址 https://10.30.2.171/phoenix/login-html.jsf
+2018-04-20 10:31:38 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####测试方法: function1 运行成功
+2018-04-20 10:31:41 ftnt.qa.autotest.ui.framework.utils.ExcuteBatCommand-INFO : #####清理浏览器进程成功#####
+2018-04-20 10:31:41 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####AfterMethod:清理浏览器进程完毕
+2018-04-20 10:31:43 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####
+2018-04-20 10:31:43 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####@AfterClass:执行结束测试类：ftnt.qa.autotest.ui.fortisiem.testcases.Organization 执行完毕
+2018-04-20 10:31:43 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : ############################################################
+
+2018-04-20 10:32:04 ftnt.qa.autotest.ui.framework.testbase.TestBase-INFO : #####全部测试用例执行完毕#####
+2018-04-20 10:32:04 ftnt.qa.autotest.ui.framework.testng.listener.SimpleReportListener-INFO : #####测试结果存储路径：D:\Developer\sts-bundle\workspace\Fortinet_UI_Auto_Test_SimplerVersion\TestNG-output
+2018-04-20 10:32:04 ftnt.qa.autotest.ui.framework.testng.listener.SimpleReportListener-INFO : #####测试结果打包路径：D:\Developer\sts-bundle\workspace\Fortinet_UI_Auto_Test_SimplerVersion\TestNG-output\Automation_Result_2018-04-20_10_32_04.zip
+2018-04-20 10:32:04 ftnt.qa.autotest.ui.framework.testng.listener.SimpleReportListener-INFO : 不发送结果zip文件

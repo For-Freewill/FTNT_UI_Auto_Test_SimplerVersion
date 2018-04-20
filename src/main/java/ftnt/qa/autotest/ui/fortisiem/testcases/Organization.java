@@ -1,4 +1,4 @@
-package ftnt.qa.autotest.ui.fortisiem.pageobject;
+package ftnt.qa.autotest.ui.fortisiem.testcases;
 
 import java.io.File;
 import java.util.List;
@@ -11,13 +11,14 @@ import org.testng.xml.XmlTest;
 
 import com.github.crab2died.ExcelUtils;
 
+import ftnt.qa.autotest.ui.fortisiem.pageobject.Login;
 import ftnt.qa.autotest.ui.framework.excel.ExcelUtil;
 import ftnt.qa.autotest.ui.framework.excel.model.ConvertModel;
 import ftnt.qa.autotest.ui.framework.testbase.TestBase;
 //@Listeners({ftnt.qa.autotest.ui.framework.testng.listener.ScreenShotListener.class,
 //	ftnt.qa.autotest.ui.framework.testng.listener.RetryListener.class,
 //	ftnt.qa.autotest.ui.framework.testng.listener.ReportListener.class})
-public class testBase2 extends TestBase {
+public class Organization extends TestBase {
 	
 	private static String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "excel"
 			+ File.separator;
