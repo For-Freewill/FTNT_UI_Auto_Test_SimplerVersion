@@ -1,448 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="3" failed="1" ignored="2" total="12" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[方法<function2>执行失败，重试第1次]]>
-    </line>
-    <line>
-      <![CDATA[方法<function2>执行失败，重试第2次]]>
-    </line>
-    <line>
-      <![CDATA[方法<function2>执行失败，重试第3次]]>
-    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="72989" started-at="2018-04-20T02:30:50Z" finished-at="2018-04-20T02:32:03Z">
+  <suite name="Default suite" duration-ms="35072" started-at="2018-04-24T09:25:35Z" finished-at="2018-04-24T09:26:10Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="72989" started-at="2018-04-20T02:30:50Z" finished-at="2018-04-20T02:32:03Z">
+    <test name="Default test" duration-ms="35072" started-at="2018-04-24T09:25:35Z" finished-at="2018-04-24T09:26:10Z">
       <class name="ftnt.qa.autotest.ui.fortisiem.testcases.User">
-        <test-method status="PASS" signature="initTest(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="initTest" is-config="true" duration-ms="54" started-at="2018-04-20T02:30:50Z" finished-at="2018-04-20T02:30:50Z">
+        <test-method status="PASS" signature="initTest(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="initTest" is-config="true" duration-ms="54" started-at="2018-04-24T09:25:35Z" finished-at="2018-04-24T09:25:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
+                <![CDATA[org.testng.xml.XmlTest@8531cd36]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
+                <![CDATA[org.testng.TestRunner@7a362b6b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTest -->
-        <test-method status="PASS" signature="beforeClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="beforeClass" is-config="true" duration-ms="4" started-at="2018-04-20T02:30:50Z" finished-at="2018-04-20T02:30:50Z">
+        <test-method status="PASS" signature="beforeClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="beforeClass" is-config="true" duration-ms="4" started-at="2018-04-24T09:25:35Z" finished-at="2018-04-24T09:25:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
+                <![CDATA[org.testng.xml.XmlTest@8531cd36]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
+                <![CDATA[org.testng.TestRunner@7a362b6b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="initDriver" is-config="true" duration-ms="5528" started-at="2018-04-20T02:30:50Z" finished-at="2018-04-20T02:30:56Z">
+        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="initDriver" is-config="true" duration-ms="4387" started-at="2018-04-24T09:25:35Z" finished-at="2018-04-24T09:25:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
+                <![CDATA[org.testng.TestRunner@7a362b6b]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
+                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function1() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
+                <![CDATA[org.testng.xml.XmlTest@8531cd36]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="SKIP" signature="function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="function2" duration-ms="12" started-at="2018-04-20T02:30:56Z" finished-at="2018-04-20T02:30:56Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="function1" duration-ms="25969" started-at="2018-04-24T09:25:39Z" finished-at="2018-04-24T09:26:05Z">
           <reporter-output>
-            <line>
-              <![CDATA[方法<function2>执行失败，重试第1次]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- function2 -->
-        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="cleanEnv" is-config="true" duration-ms="4846" started-at="2018-04-20T02:30:56Z" finished-at="2018-04-20T02:31:01Z">
+        </test-method> <!-- function1 -->
+        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="cleanEnv" is-config="true" duration-ms="4691" started-at="2018-04-24T09:26:05Z" finished-at="2018-04-24T09:26:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=function2 status=SKIP method=User.function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542] output=方法<function2>执行失败，重试第1次]]]>
+                <![CDATA[[TestResult name=function1 status=SUCCESS method=User.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
+                <![CDATA[org.testng.xml.XmlTest@8531cd36]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
+                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function1() throws java.lang.Exception]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
+                <![CDATA[org.testng.TestRunner@7a362b6b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanEnv -->
-        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="initDriver" is-config="true" duration-ms="3806" started-at="2018-04-20T02:31:01Z" finished-at="2018-04-20T02:31:05Z">
+        <test-method status="PASS" signature="afterClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="afterClass" is-config="true" duration-ms="4" started-at="2018-04-24T09:26:10Z" finished-at="2018-04-24T09:26:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
+                <![CDATA[org.testng.xml.XmlTest@8531cd36]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="SKIP" signature="function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="function2" duration-ms="3" started-at="2018-04-20T02:31:05Z" finished-at="2018-04-20T02:31:05Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[方法<function2>执行失败，重试第2次]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- function2 -->
-        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="cleanEnv" is-config="true" duration-ms="4821" started-at="2018-04-20T02:31:05Z" finished-at="2018-04-20T02:31:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=function2 status=SKIP method=User.function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542] output=方法<function2>执行失败，重试第2次]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanEnv -->
-        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="initDriver" is-config="true" duration-ms="3828" started-at="2018-04-20T02:31:09Z" finished-at="2018-04-20T02:31:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="SKIP" signature="function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="function2" duration-ms="3" started-at="2018-04-20T02:31:13Z" finished-at="2018-04-20T02:31:13Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-            <line>
-              <![CDATA[方法<function2>执行失败，重试第3次]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- function2 -->
-        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="cleanEnv" is-config="true" duration-ms="4769" started-at="2018-04-20T02:31:13Z" finished-at="2018-04-20T02:31:18Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=function2 status=SKIP method=User.function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542] output=方法<function2>执行失败，重试第3次]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanEnv -->
-        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="initDriver" is-config="true" duration-ms="3862" started-at="2018-04-20T02:31:18Z" finished-at="2018-04-20T02:31:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="FAIL" signature="function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="function2" duration-ms="1" started-at="2018-04-20T02:31:22Z" finished-at="2018-04-20T02:31:22Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at ftnt.qa.autotest.ui.fortisiem.testcases.User.function2(User.java:20)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.retryFailed(Invoker.java:838)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1009)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- function2 -->
-        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="cleanEnv" is-config="true" duration-ms="4937" started-at="2018-04-20T02:31:24Z" finished-at="2018-04-20T02:31:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=function2 status=FAILURE method=User.function2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function2()]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanEnv -->
-        <test-method status="PASS" signature="afterClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="afterClass" is-config="true" duration-ms="2" started-at="2018-04-20T02:31:29Z" finished-at="2018-04-20T02:31:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
+                <![CDATA[org.testng.TestRunner@7a362b6b]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="terminTestSuite(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@61009542]" name="terminTestSuite" is-config="true" duration-ms="1" started-at="2018-04-20T02:32:04Z" finished-at="2018-04-20T02:32:04Z">
+        <test-method status="PASS" signature="terminTestSuite(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="terminTestSuite" is-config="true" duration-ms="0" started-at="2018-04-24T09:26:10Z" finished-at="2018-04-24T09:26:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
+                <![CDATA[org.testng.xml.XmlTest@8531cd36]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
+                <![CDATA[org.testng.TestRunner@7a362b6b]]>
               </value>
             </param>
           </params>
@@ -450,113 +123,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- terminTestSuite -->
       </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.User -->
-      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.Organization">
-        <test-method status="PASS" signature="beforeClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Organization@77e9807f]" name="beforeClass" is-config="true" duration-ms="1" started-at="2018-04-20T02:31:29Z" finished-at="2018-04-20T02:31:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Organization@77e9807f]" name="initDriver" is-config="true" duration-ms="3848" started-at="2018-04-20T02:31:29Z" finished-at="2018-04-20T02:31:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.Organization.function1() throws java.lang.Exception]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Organization@77e9807f]" name="function1" duration-ms="5785" started-at="2018-04-20T02:31:32Z" finished-at="2018-04-20T02:31:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- function1 -->
-        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Organization@77e9807f]" name="cleanEnv" is-config="true" duration-ms="5123" started-at="2018-04-20T02:31:38Z" finished-at="2018-04-20T02:31:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=function1 status=SUCCESS method=Organization.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Organization@77e9807f] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.Organization.function1() throws java.lang.Exception]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanEnv -->
-        <test-method status="PASS" signature="afterClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Organization@77e9807f]" name="afterClass" is-config="true" duration-ms="2" started-at="2018-04-20T02:31:43Z" finished-at="2018-04-20T02:31:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.xml.XmlTest@abc4129b]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@6eb2384f]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.Organization -->
-      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.Credentials">
-        <test-method status="PASS" signature="test1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Credentials@448ff1a8]" name="test1" duration-ms="5004" started-at="2018-04-20T02:31:43Z" finished-at="2018-04-20T02:31:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Credentials@448ff1a8]" name="test2" duration-ms="3002" started-at="2018-04-20T02:31:48Z" finished-at="2018-04-20T02:31:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test3()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Credentials@448ff1a8]" name="test3" duration-ms="2001" started-at="2018-04-20T02:31:51Z" finished-at="2018-04-20T02:31:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Credentials@448ff1a8]" name="test4" duration-ms="5001" started-at="2018-04-20T02:31:53Z" finished-at="2018-04-20T02:31:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test4 -->
-        <test-method status="PASS" signature="test5()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.Credentials@448ff1a8]" name="test5" duration-ms="5002" started-at="2018-04-20T02:31:58Z" finished-at="2018-04-20T02:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test5 -->
-      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.Credentials -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

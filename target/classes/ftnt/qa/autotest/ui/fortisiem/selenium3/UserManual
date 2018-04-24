@@ -1,0 +1,160 @@
+############ 常见WEB元素处理手册 ###########
+1-输入框（input）
+1-1：找到输入框元素：WebElement element = driver.findElement(By.id("passwd-id"));
+1-2：将输入框清空：element.clear();
+1-3：在输入框中输入内容：element.sendKeys(“test”);
+1-4：获取输入框的文本内容：:element.getAttribute("value");
+
+2-下拉选择框(Select)
+2-1：定位下拉选择框的元素：Select select = new Select(driver.findElement(By.id("areaID")));
+2-2：选择对应的选择项：
+	select.selectByVisibleText(“北京市”); //通过可见文本去选择
+	select.selectByValue(“beijing”); //通过html中的value值去选择
+	select.selectByIndex(1); //通过index（索引从0开始）选择
+2-3：不选择对应的选择项：
+	select.deselectAll();
+	select.deselectByValue(“替换成实际的值”);
+	select.deselectByVisibleText(“替换成实际的值”);
+	或者获取选择项的值：
+	select.getAllSelectedOptions(); //多选列表，list循环可获取到对应的值
+	select.getFirstSelectedOption().getText(); //单选列表直接获取值
+
+3-单选项(Radio Button)
+3-1：定位单选框元素：WebElement r_sex =driver.findElement(By.id("sexID1 "));
+3-2：选择某个单选项：r_sex.click();
+3-3：清空某个单选项：r_sex.clear(); //必须是clear，单选框无法取消选择
+3-4：判断某个单选项是否已经被选择：r_sex.isSelected(); //返回的是Boolean类型
+
+4-多选框（CheckBox）
+4-1：定位多选框：WebElement checkbox =driver.findElement(By.id("替换成实际的定位的值"));
+4-2：checkbox.click(); //点击复选框
+4-3：checkbox.clear(); //清除复选框
+4-4：checkbox.isSelected(); //判断复选框是否被选中
+4-5：checkbox.isEnabled(); //判断复选框是否可用
+
+5-按钮（button）
+5-1：定位按钮元素：WebElement saveButton = driver.findElement(By.id("替换成实际的定位的值"));
+5-2：点击按钮：saveButton.click();
+5-3：判断按钮是否可用：saveButton.isEnabled ();
+
+6-左右选择框（也就是左边是可供选择项，选择后移动到右边的框中，反之亦然。）
+	Select lang = new Select(driver.findElement(By.id("languages"))); //先处理选择框
+	lang.selectByVisibleText(“English”);
+	WebElement addLanguage =driver.findElement(By.id("addButton")); //再处理向右移动的按钮
+	addLanguage.click();
+
+7-弹出对话框（alert）如何区分页面对话框和弹出页面：选择弹出框，可以F12查看元素的是弹出页面，否则为弹出框。
+7-1：定位对话框：Alert alert = driver.switchTo().alert();
+7-2：弹出框确定：alert.accept();
+7-3：弹出框关闭：alert.dismiss();
+7-3：弹出框文字信息获取：alert.getText();
+
+8-表单（form）
+8-1：定位表单元素：WebElement approve = driver.findElement(By.id("approve"));
+8-2：表单提交：approve.submit(); 
+
+9-上传文件（input file）
+9-1：定位元素：WebElement adFileUpload = driver.findElement(By.id("替换成实际的定位的值")); //定位上传控件
+9-2：定义上传文件的路径：String filePath = "C:\\test\\uploadfile \\test.jpg"; //定义了一个本地文件的路径
+9-3：上传框赋值：adFileUpload.sendKeys(filePath); //为上传控件进行赋值操作，将需要上传的文件的路径赋给控件
+
+10-Action:拖拉元素到新位置
+10-1：定义src,dst元素：
+	WebElement element =driver.findElement(By.name("source")); //定义第一个元素
+	WebElement target = driver.findElement(By.name("target")); //定义第二个元素
+10-2：dragAndDrop元素：(new Actions(driver)).dragAndDrop(element, target).perform(); //将第一个元素拖拽到第二个元素
+
+11-Action:鼠标悬停
+11-1:初始化action：Actions builder = new Actions(driver);
+11-2：悬停：builder.moveToElement(driver.findElement(locator)).perform(); //locator是目标元素的定位器
+
+12-框架（Frame）
+12-1:frame序号定位：driver.switchTo().frame(Int index); //传入参数为frame的序号，从0开始
+12-2:frame ID定位：driver.switchTo().frame(String nameOrId); //传入参数为frame的ID或者Name属性
+12-3:frame父级定位：driver.switchTo().parentFrame(); //切换回父级 –高版本selenium可用
+12-4:frame默认定位：driver.switchTo().defaultContent(); //切换回默认
+
+13-多浏览器窗口的处理（Windows） 
+13-1：单窗口：只弹出一个窗口的情况,不需要传入任何参数,直接切换到下一个窗口
+13-2：得到当前窗口的句柄：String currentWindow = driver.getWindowHandle();
+13-3：得到所有窗口的句柄：Set<String> handles = driver.getWindowHandles();
+13-4：多窗口切换：参考CommonAction类方法
+
+14-处理对话框alert\confirm\prompt
+14-1：处理alert
+	driver.findElement(By.id("alert")).click(); //点击会触发alert的元素，比如按钮
+	Alert alert = driver.switchTo().alert();
+	String text = alert.getText(); //获取alert上的文本
+	System.out.println(text);
+	alert.dismiss(); //关闭alert
+14-2：处理confirm
+	driver.findElement(By.id("confirm")).click(); //点击会触发confirm的元素，比如按钮
+	Alert confirm = driver.switchTo().alert();
+	String text1 = confirm.getText(); //获取confirm上的文本
+	System.out.println(text1);
+	confirm.accept(); //关闭confirm
+14-3：处理prompt
+	driver.findElement(By.id("prompt")).click(); //点击会触发prompt的元素，比如按钮
+	Alert prompt = driver.switchTo().alert();
+	String text2 = prompt.getText(); //获取prompt上的文本
+	System.out.println(text2);
+	prompt.sendKeys("ok!!!!"); //输入值，如果支持输入的话
+	prompt.accept(); //关闭prompt
+
+15-表格的处理（table） 
+15-1：定位表格：WebElement element =driver.findElement(By.name("table"));
+15-2：表格内容获取：参考CommonAction方法
+
+16-富文本编辑器（执行js脚本）
+16-1：富文本编辑框的处理 driver.switchTo().frame("ueditor_0"); //定位到富文本输入框所在的frame 
+16-2：JavascriptExecutor js = (JavascriptExecutor) driver; 
+16-3：js.executeScript("document.body.innerHTML='ABCDEFG'"); //通过js赋值进去
+
+17-Actions解析
+	keyDown(Keys.ATL) //按下键ALT
+	keyDown(WebElement, Keys.ATL)//定位到元素后按下键
+	keyUp(Keys.F4) //释放键
+	keyUp(WebElement, CharSequence)//定位到元素后释放
+	sendKeys(CharSequence...)//普通按键操作：action.sendKeys(Keys.ENTER).perform();（按下enter键）
+	sendKeys(WebElement, CharSequence...)
+	clickAndHold(WebElement)//鼠标左键点击后不放
+	clickAndHold()
+	release(WebElement)//释放鼠标左键
+	release()
+	click(WebElement)//鼠标左键点击
+	click()
+	doubleClick(WebElement)//鼠标左键双击
+	doubleClick()
+	moveToElement(WebElement)//鼠标指向元素并悬停
+	moveToElement(WebElement, int, int)
+	moveByOffset(int, int)
+	contextClick(WebElement)//鼠标右击
+	contextClick()
+	dragAndDrop(WebElement, WebElement)//鼠标拖拉元素
+	dragAndDropBy(WebElement, int, int)
+	pause(long)
+	pause(Duration)
+	tick(Interaction...)
+	tick(Action)
+	build()
+	perform()//执行动作
+
+18-Cookie操作
+18-1：增加cookie：	
+	//增加一个name = "name",value="value"的cookie
+	Cookie cookie = new Cookie("name", "value");
+	driver.manage().addCookie(cookie);
+18-2：得到当前页面下所有的cookies，并且输出它们的所在域、name、value、有效日期和路径
+	Set<Cookie> cookies = driver.manage().getCookies();
+	System.out.println(String.format("Domain -> name -> value -> expiry -> path"));
+	for(Cookie c : cookies)
+	System.out.println(String.format("%s -> %s -> %s -> %s -> %s",
+	c.getDomain(), c.getName(), c.getValue(),c.getExpiry(),c.getPath()));
+18-3：删除cookie有三种方法
+	//第一种通过cookie的name
+	dr.manage().deleteCookieNamed("CookieName");
+	//第二种通过Cookie对象
+	dr.manage().deleteCookie(cookie);
+	//第三种全部删除
+	dr.manage().deleteAllCookies();
+	

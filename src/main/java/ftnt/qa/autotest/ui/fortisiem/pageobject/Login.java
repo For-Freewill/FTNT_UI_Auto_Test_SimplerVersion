@@ -1,10 +1,15 @@
 package ftnt.qa.autotest.ui.fortisiem.pageobject;
 
+import org.apache.commons.configuration.ConfigurationException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import ftnt.qa.autotest.ui.framework.utils.CaptureElementUtil;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,9 +18,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class Login {
     private WebDriver driver;
+    
 
     public Login(WebDriver driver) {
-        this.driver = driver;
+    	this.driver = driver;
     }
 
     @FindBy(id = "loginHtml:username")
@@ -36,8 +42,13 @@ public class Login {
     private WebElement errorMsg;
     @FindBy(id = "si_searchAttrInput")
     private WebElement searchAttrInput;
+    
+    @FindBy(how = How.ID_OR_NAME, using = "btnActive")
+    private WebElement submitbtn;
+    
 
-    public Login login(String userName, String password, String custId, String domain) {
+    
+    public Login login(String userName, String password, String custId, String domain) throws ConfigurationException {
         this.userName.sendKeys(userName);
         this.password.sendKeys(password);
         this.domain.clear();
@@ -51,12 +62,18 @@ public class Login {
             } catch (org.openqa.selenium.StaleElementReferenceException e) {
             }
         }
+        
+
         loginBtn.click();
+      //截取指定元素，这里必须使用 driver.find的方式传递
+        CaptureElementUtil.getInstance().getScreenShot(driver.findElement(By.id("logoDiv")));
+        
         try {
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         return PageFactory.initElements(driver, Login.class);
     }
 

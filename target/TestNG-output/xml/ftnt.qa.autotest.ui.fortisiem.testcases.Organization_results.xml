@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="8.168">
+           time="150.709">
   <properties />
   
   
-            <testcase name="function1" time="8.168" classname="ftnt.qa.autotest.ui.fortisiem.testcases.Organization" />
+            <testcase name="function1" time="150.709" classname="ftnt.qa.autotest.ui.fortisiem.testcases.Organization" />
       
 </testsuite>

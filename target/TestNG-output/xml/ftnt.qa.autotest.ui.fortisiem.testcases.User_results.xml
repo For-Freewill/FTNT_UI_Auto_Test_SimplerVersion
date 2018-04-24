@@ -4,7 +4,7 @@
            failures="1"
            errors="0"
            skipped="3"
-           time="0.002">
+           time="0.003">
   <properties />
             <testcase name="function2" time="0.000" classname="ftnt.qa.autotest.ui.fortisiem.testcases.User">
                 <failure type="java.lang.AssertionError"

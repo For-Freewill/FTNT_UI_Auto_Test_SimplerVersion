@@ -19,7 +19,6 @@ import ftnt.qa.autotest.ui.framework.testbase.TestBase;
 //	ftnt.qa.autotest.ui.framework.testng.listener.RetryListener.class,
 //	ftnt.qa.autotest.ui.framework.testng.listener.ReportListener.class})
 public class Organization extends TestBase {
-	
 	private static String path = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "excel"
 			+ File.separator;
 	private static String exppath = System.getProperty("user.dir") + File.separator + "TestData" + File.separator + "export"
@@ -29,7 +28,8 @@ public class Organization extends TestBase {
 	public void function1() throws Exception {
 		WebDriver driver = TestBase.getWebDriver();
 		Login loginObj = PageFactory.initElements(driver, Login.class);
-        loginObj.login("admin", "admin*1", "super","LOCAL");
+		loginObj.login("admin", "admin*1", "super","LOCAL");
+		//loginObj.logout();
 	}
 
 	

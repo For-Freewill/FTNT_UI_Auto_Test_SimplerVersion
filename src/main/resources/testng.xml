@@ -3,8 +3,8 @@
 	<test name="Test">
 		<classes>
 			<class name="ftnt.qa.autotest.ui.fortisiem.testcases.User" />
-			<class name="ftnt.qa.autotest.ui.fortisiem.testcases.Organization" />
-			<class name="ftnt.qa.autotest.ui.fortisiem.testcases.Credentials" />
+<!-- 			<class name="ftnt.qa.autotest.ui.fortisiem.testcases.Organization" /> -->
+<!-- 			<class name="ftnt.qa.autotest.ui.fortisiem.testcases.Credentials" /> -->
 		</classes>
 		<listeners>
 			<listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.TestNGListener" />

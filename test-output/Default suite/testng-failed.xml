@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ftnt.qa.autotest.ui.fortisiem.pageobject.testBase">
+      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.User">
         <methods>
+          <include name="function1"/>
           <include name="initTest"/>
           <include name="initDriver"/>
           <include name="cleanEnv"/>
           <include name="afterClass"/>
-          <include name="function2"/>
           <include name="terminTestSuite"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- ftnt.qa.autotest.ui.fortisiem.pageobject.testBase -->
+      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.User -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

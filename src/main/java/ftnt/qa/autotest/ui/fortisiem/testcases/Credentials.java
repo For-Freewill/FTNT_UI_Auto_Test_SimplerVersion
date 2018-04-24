@@ -8,7 +8,7 @@ import ftnt.qa.autotest.ui.framework.testbase.TestBase;
 
 public class Credentials extends TestBase{
 
-	@Test
+	@Test(groups= {"login"})
 	public void test1() {
 		sleep(5000);
 		System.out.println(">>>test1");
