@@ -16,10 +16,10 @@ import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
 
 
 /**
- * 失败Case保存截图并保存到指定目录
+ * 截取指定元素
  * @see 监听器实现失败截图
  * @author Lei.Wu
- * @date 2018-3-12
+ * @date 2018-4-24
  * @version FTNT-UI-AutoTest Version 1.0
  * @since Jdk1.8
  */
