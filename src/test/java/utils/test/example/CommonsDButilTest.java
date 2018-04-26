@@ -22,14 +22,14 @@ public class CommonsDButilTest {
 	public static void main(String[] args) {
 		//查看ReportServerde的AO创建的数据库和自动同步的数据库
 		// ArrayListHandler：把结果集中的每一行数据都转成一个数组，再存放到List中。
-		List<Object[]> resultlist = CommonsRSDButil
-				.queryArrayList("select tablename,tableowner from pg_tables where schemaname=? and tableowner=?", "public","phoenix");
-		for (Object[] objects : resultlist) {
-			for (Object object2 : objects) {
-				System.out.println("ArrayListHandler：把结果集中的每一行数据都转成一个数组，再存放到List中。" + Arrays.asList(object2));
-			}
-		}
-		
+//		List<Object[]> resultlist = CommonsRSDButil
+//				.queryArrayList("select tablename,tableowner from pg_tables where schemaname=? and tableowner=?", "public","phoenix");
+//		for (Object[] objects : resultlist) {
+//			for (Object object2 : objects) {
+//				System.out.println("ArrayListHandler：把结果集中的每一行数据都转成一个数组，再存放到List中。" + Arrays.asList(object2));
+//			}
+//		}
+//		
 		
 		// ArrayHandler：把结果集中的第一行数据转成对象数组。
 		Object[] result = CommonsDButil

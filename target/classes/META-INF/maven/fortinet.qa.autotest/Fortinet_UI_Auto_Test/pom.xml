@@ -14,7 +14,7 @@
 		<selenium-version>3.11.0</selenium-version> <!-- Selenium3.10的版本 -->
 		<testng-version>6.14.2</testng-version><!-- TestNG版本，testng6+selenium3 -->
 		<junit-version>4.12</junit-version><!-- JUnit版本 -->
-		<slf4j>1.6.6</slf4j><!-- Log4j 版本 -->
+		<slf4j>1.7.25</slf4j><!-- Log4j 版本 -->
 		<maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
 		<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
 	</properties>
@@ -177,7 +177,7 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
+			<version>1.2.17</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>
@@ -224,7 +224,13 @@
 				<directory>BrowserDriver</directory>
 				<targetPath>${project.build.directory}/BrowserDriver</targetPath>
 			</resource>
-
+			
+			<!-- 控制浏览器驱动文件目录复制到target/BrowserDriver 目录 ，必须设置 -->
+			<resource>
+				<directory>TestData</directory>
+				<targetPath>${project.build.directory}/TestData</targetPath>
+			</resource>
+			
 			<!-- 控制TestNG-output的拷贝target/TestNG-output 目录，这个是用于maven执行时的打包 -->
 			<resource>
 				<directory>TestNG-output</directory>

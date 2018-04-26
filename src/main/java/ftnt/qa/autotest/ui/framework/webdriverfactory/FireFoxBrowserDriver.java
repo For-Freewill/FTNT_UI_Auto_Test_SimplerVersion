@@ -2,7 +2,6 @@ package ftnt.qa.autotest.ui.framework.webdriverfactory;
 
 import java.io.File;
 
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.GeckoDriverService;
 

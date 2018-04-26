@@ -32,9 +32,9 @@ Class-Path: lib/selenium-java-3.11.0.jar lib/selenium-api-3.11.0.jar l
  .jar lib/commons-collections4-4.1.jar lib/poi-ooxml-3.17.jar lib/poi-
  ooxml-schemas-3.17.jar lib/xmlbeans-2.6.0.jar lib/stax-api-1.0.1.jar 
  lib/curvesapi-1.04.jar lib/mysql-connector-java-6.0.6.jar lib/postgre
- sql-42.2.2.jar lib/c3p0-0.9.1.2.jar lib/slf4j-api-1.6.6.jar lib/jcl-o
- ver-slf4j-1.6.6.jar lib/slf4j-log4j12-1.6.6.jar lib/log4j-1.2.15.jar 
- lib/dom4j-1.6.1.jar
+ sql-42.2.2.jar lib/c3p0-0.9.1.2.jar lib/slf4j-api-1.7.25.jar lib/jcl-
+ over-slf4j-1.7.25.jar lib/slf4j-log4j12-1.7.25.jar lib/log4j-1.2.17.j
+ ar lib/dom4j-1.6.1.jar
 Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 Main-Class: ftnt.qa.autotest.ui.fortisiem.pageobject.testBase2

@@ -5,4 +5,5 @@ encoding//src/test/java=UTF-8
 encoding//src/test/resources=UTF-8
 encoding/<project>=UTF-8
 encoding/BrowserDriver=UTF-8
+encoding/TestData=UTF-8
 encoding/TestNG-output=UTF-8

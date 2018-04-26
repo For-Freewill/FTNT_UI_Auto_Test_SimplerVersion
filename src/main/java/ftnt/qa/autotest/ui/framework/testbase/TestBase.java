@@ -27,6 +27,10 @@ public abstract class TestBase implements ITestBase {
 	protected static WebDriver webDriver;
 	protected static String browserType;
 
+	public static void setWebDriver(WebDriver webDriver) {
+		TestBase.webDriver = webDriver;
+	}
+
 	@BeforeSuite(alwaysRun = true)
 	public void initTest(XmlTest xt, ITestContext tc) throws Exception {
 		browserType = CommonsPropertiesUtils.ReadSinglePropertiesWithValue("framework.properties", "Browser.Type",
@@ -110,7 +114,7 @@ public abstract class TestBase implements ITestBase {
 
 	private void openTargetWebSit(String website) {
 		if (CookiesUtil.getCk() != null) {
-			webDriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+			webDriver.manage().timeouts().pageLoadTimeout(300, TimeUnit.SECONDS);
 			try {
 				webDriver.get(website);
 			} catch (Exception e) {
@@ -121,7 +125,6 @@ public abstract class TestBase implements ITestBase {
 			webDriver.get(website);
 		} catch (Exception e) {
 		}
-		webDriver.manage().timeouts().pageLoadTimeout(-1, TimeUnit.SECONDS);
 	}
 
 	/**
