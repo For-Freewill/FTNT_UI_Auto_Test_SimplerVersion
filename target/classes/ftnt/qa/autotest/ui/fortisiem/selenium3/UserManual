@@ -1,12 +1,14 @@
 ############ 常见WEB元素处理手册 ###########
 1-输入框（input）
-1-1：找到输入框元素：WebElement element = driver.findElement(By.id("passwd-id"));
-1-2：将输入框清空：element.clear();
-1-3：在输入框中输入内容：element.sendKeys(“test”);
+1-1：定位输入框：WebElement element = driver.findElement(By.id("passwd-id"));
+1-2：输入框清空：element.clear();
+1-3：输入框中输入内容：element.sendKeys(“test”);
 1-4：获取输入框的文本内容：:element.getAttribute("value");
 
+
+
 2-下拉选择框(Select)
-2-1：定位下拉选择框的元素：Select select = new Select(driver.findElement(By.id("areaID")));
+2-1：定位下拉选择框：Select select = new Select(driver.findElement(By.id("areaID")));
 2-2：选择对应的选择项：
 	select.selectByVisibleText(“北京市”); //通过可见文本去选择
 	select.selectByValue(“beijing”); //通过html中的value值去选择
@@ -20,7 +22,7 @@
 	select.getFirstSelectedOption().getText(); //单选列表直接获取值
 
 3-单选项(Radio Button)
-3-1：定位单选框元素：WebElement r_sex =driver.findElement(By.id("sexID1 "));
+3-1：定位单选框：WebElement r_sex =driver.findElement(By.id("sexID1 "));
 3-2：选择某个单选项：r_sex.click();
 3-3：清空某个单选项：r_sex.clear(); //必须是clear，单选框无法取消选择
 3-4：判断某个单选项是否已经被选择：r_sex.isSelected(); //返回的是Boolean类型
@@ -42,6 +44,26 @@
 	lang.selectByVisibleText(“English”);
 	WebElement addLanguage =driver.findElement(By.id("addButton")); //再处理向右移动的按钮
 	addLanguage.click();
+
+
+################ WebElement的全部方法 #######################
+click()
+submit()
+sendKeys(CharSequence...)
+clear()
+getTagName()
+getAttribute(String)
+isSelected()
+isEnabled()
+getText()
+findElements(By)
+findElement(By)
+isDisplayed()
+getLocation()
+getSize()
+getRect()
+getCssValue(String)
+######################################################
 
 7-弹出对话框（alert）如何区分页面对话框和弹出页面：选择弹出框，可以F12查看元素的是弹出页面，否则为弹出框。
 7-1：定位对话框：Alert alert = driver.switchTo().alert();
@@ -106,10 +128,20 @@
 15-2：表格内容获取：参考CommonAction方法
 
 16-富文本编辑器（执行js脚本）
+
 16-1：富文本编辑框的处理 driver.switchTo().frame("ueditor_0"); //定位到富文本输入框所在的frame 
 16-2：JavascriptExecutor js = (JavascriptExecutor) driver; 
 16-3：js.executeScript("document.body.innerHTML='ABCDEFG'"); //通过js赋值进去
-
+例子：日期框赋值
+	driver.get(baseUrl);
+    //driver.findElement(By.id("datetimeID")).sendKeys("2017-10-16"); //特殊表单控件无法通过sendkeys赋值
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("document.getElementById('datetimeID').setAttribute('value','2017-10-16');"); //可以通过执行JS语句操作页面元素
+ 
+例子2：滚动条
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("document.documentElement.scrollTop=1500");
+######################## Actions全部方法介绍 ############################
 17-Actions解析
 	keyDown(Keys.ATL) //按下键ALT
 	keyDown(WebElement, Keys.ATL)//定位到元素后按下键
@@ -138,6 +170,16 @@
 	tick(Action)
 	build()
 	perform()//执行动作
+例子：
+    driver.get(baseUrl);
+    WebElement account = driver.findElement(By.id("accountID"));
+    WebElement password = driver.findElement(By.id("passwordID"));
+    account.sendKeys("123");//输入字符串。webelement的sendkeys方法注意与Action的sendkeys的区别。一个是输入字符串，一个是按下键盘普通键
+    Actions action3 = new Actions(driver);//初始化actions类。
+    action3.sendKeys(account,Keys.TAB).perform();//按tab键
+    Thread.sleep(3000);
+    action3.keyDown(Keys.CONTROL).sendKeys("a").perform();//按ctrl+a键全选
+################################################################################
 
 18-Cookie操作
 18-1：增加cookie：	
