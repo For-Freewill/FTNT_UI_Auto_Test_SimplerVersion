@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="ftnt.qa.autotest.ui.framework.testng.listener.TestNGListener"/>
-  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.User">
+      <class name="ftnt.qa.autotest.ui.fortisiem.testng6.InjectTest">
         <methods>
-          <include name="function2"/>
-          <include name="initTest"/>
-          <include name="initDriver"/>
-          <include name="cleanEnv"/>
-          <include name="afterClass"/>
-          <include name="terminTestSuite"/>
-          <include name="beforeClass"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.User -->
+      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testng6.InjectTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

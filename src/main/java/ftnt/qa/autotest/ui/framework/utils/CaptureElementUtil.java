@@ -17,7 +17,7 @@ import ftnt.qa.autotest.ui.framework.constants.CommonConstants;
 
 /**
  * 截取指定元素
- * @see 监听器实现失败截图
+ * @see 单例模式，获取指定元素的截图
  * @author Lei.Wu
  * @date 2018-4-24
  * @version FTNT-UI-AutoTest Version 1.0
@@ -46,6 +46,9 @@ public class CaptureElementUtil {
         this.driver=driver;
     }
 
+    /*
+     * @param element 在PO的类中，需要使用driver.find**的方式获取元素，无法传递@FindBy()定义的元素
+     * */
 	public void getScreenShot(WebElement element) throws ConfigurationException {
 		String screenShotPath = CommonsPropertiesUtils.ReadSingleProperties(CommonConstants.PROPEERTIES_FILE_PATH, "failedcase.screenShotPath");
 		File screenShotDir = new File(screenShotPath);

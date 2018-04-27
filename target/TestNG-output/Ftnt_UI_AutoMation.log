@@ -1,15 +1,3 @@
-2018-04-26 11:24:08 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####开始执行测试用例#####
-2018-04-26 11:24:08 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : ############################################################
-2018-04-26 11:24:08 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####BeforeClass:开始执行测试类:ftnt.qa.autotest.ui.fortisiem.testcases.User 执行开始
-2018-04-26 11:24:08 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####
-2018-04-26 11:24:08 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####测试开始时间：Thu Apr 26 11:24:08 CST 2018
-2018-04-26 11:24:11 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####BeforeMethod:测试用例运行的浏览器类型：ftnt.qa.autotest.ui.framework.webdriverfactory.ChromeBrowserDriver
-2018-04-26 11:24:11 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####BeforeMethod:测试网址 https://10.30.2.85/phoenix/login-html.jsf
-2018-04-26 11:24:23 ftnt.qa.autotest.ui.fortisiem.pageobject.Login-INFO : getTabltBy表格信息为：User Name:
-2018-04-26 11:24:25 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####测试方法: function1 运行成功
-2018-04-26 11:24:25 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####AfterMethod:清理浏览器进程完毕
-2018-04-26 11:24:27 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####
-2018-04-26 11:24:27 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####@AfterClass:执行结束测试类：ftnt.qa.autotest.ui.fortisiem.testcases.User 执行完毕
-2018-04-26 11:24:27 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : ############################################################
-
-2018-04-26 11:24:27 ftnt.qa.autotest.ui.framework.testbase.TestBase2-INFO : #####全部测试用例执行完毕#####
+2018-04-27 12:04:30 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<test1>执行失败，重试第1次
+2018-04-27 12:04:30 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<test1>执行失败，重试第2次
+2018-04-27 12:04:30 ftnt.qa.autotest.ui.framework.testng.listener.RetryToRunCase-INFO : 方法<test1>执行失败，重试第3次

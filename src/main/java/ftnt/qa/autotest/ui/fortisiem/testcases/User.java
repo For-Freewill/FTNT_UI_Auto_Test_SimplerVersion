@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
+import com.google.inject.Inject;
+
 import ftnt.qa.autotest.ui.fortisiem.pageobject.Login;
 import ftnt.qa.autotest.ui.framework.testbase.TestBase2;
 //@Listeners({ftnt.qa.autotest.ui.framework.testng.listener.ScreenShotListener.class,
@@ -21,9 +23,15 @@ public class User extends TestBase2 {
 
 	}
 	
+//	@Inject
+//	Login loginObj;
+//	
 //	@Test
-//	public void function2() {
-//        Assert.assertTrue(false);
+//	public void guiceInject() throws Exception {
+//		//WebDriver driver = TestBase2.getWebDriver();
+//		//Login loginObj = PageFactory.initElements(driver, Login.class);
+//        loginObj.login("admin", "admin*1", "super","LOCAL");
+//
 //	}
 
 }

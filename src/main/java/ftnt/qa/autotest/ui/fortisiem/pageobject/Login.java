@@ -5,9 +5,11 @@ import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,7 +26,9 @@ import ftnt.qa.autotest.ui.framework.utils.CaptureElementUtil;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by ssuku on 1/9/17.
+ * @author Wulei
+ * @date 2018-4-26
+ * 
  */
 public class Login {
 	private WebDriver driver;
@@ -32,8 +36,10 @@ public class Login {
 
 	public Login(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);//初始化元素时等待时间
 	}
-
+	
+	
 	@FindBy(id = "loginHtml:username")
 	private WebElement userName;
 	@FindBy(id = "loginHtml:password")
@@ -56,7 +62,7 @@ public class Login {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"mainHeader\"]/div/nav/div[2]/ul[2]/li[3]/a")
 	private WebElement profile;
 
-	public Login login(String userName, String password, String custId, String domain)
+	public void login(String userName, String password, String custId, String domain)
 			throws ConfigurationException, InterruptedException {
 		this.userName.sendKeys(userName);
 		this.password.sendKeys(password);
@@ -106,7 +112,7 @@ public class Login {
 			e.printStackTrace();
 		}
 
-		return PageFactory.initElements(driver, Login.class);
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);
 	}
 
 	public boolean isLoggedIn() {
