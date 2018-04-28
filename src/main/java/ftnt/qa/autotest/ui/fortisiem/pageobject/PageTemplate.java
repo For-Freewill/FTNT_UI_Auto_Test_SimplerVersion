@@ -9,6 +9,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -39,6 +40,7 @@ public class PageTemplate {
 	 * */
 	public PageTemplate(WebDriver driver) {
 		this.driver = driver;
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);//初始化元素时等待时间
 	}
 	
 	
@@ -81,14 +83,15 @@ public class PageTemplate {
 	@FindBy(how = How.ID, using = "id")
 	private WebElement profile;
 
-	public PageTemplate login(String userName, String password, String custId, String domain)
+	public void login(String userName, String password, String custId, String domain)
 			throws ConfigurationException, InterruptedException {
 		this.tagName.sendKeys(userName);
 		this.name.sendKeys(password);
 		this.id.clear();
 		this.id.sendKeys(custId);
-
-		return PageFactory.initElements(driver, PageTemplate.class);
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);//初始化元素时等待时间
+		
+		//return PageFactory.initElements(driver, PageTemplate.class);
 	}
 
 	public PageTemplate logout() {

@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ftnt.qa.autotest.ui.fortisiem.testng6.InjectTest">
+      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest">
         <methods>
-          <include name="test1"/>
+          <include name="initDriver"/>
+          <include name="cleanEnv"/>
+          <include name="afterClass"/>
+          <include name="getUUID"/>
+          <include name="beforeClass"/>
+          <include name="terminTestSuite"/>
+          <include name="initTest"/>
         </methods>
-      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testng6.InjectTest -->
+      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
