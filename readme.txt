@@ -1,14 +1,14 @@
-下面内容也是UserMaual的内容，方便编写测试案例时操作元素
-
 ############ 常见WEB元素处理手册 ###########
+
 1-输入框（input）
-1-1：找到输入框元素：WebElement element = driver.findElement(By.id("passwd-id"));
-1-2：将输入框清空：element.clear();
-1-3：在输入框中输入内容：element.sendKeys(“test”);
+1-1：定位输入框：WebElement element = driver.findElement(By.id("passwd-id"));
+1-2：输入框清空：element.clear();
+1-3：输入框中输入内容：element.sendKeys(“test”);
 1-4：获取输入框的文本内容：:element.getAttribute("value");
 
+
 2-下拉选择框(Select)
-2-1：定位下拉选择框的元素：Select select = new Select(driver.findElement(By.id("areaID")));
+2-1：定位下拉选择框：Select select = new Select(driver.findElement(By.id("areaID")));
 2-2：选择对应的选择项：
 	select.selectByVisibleText(“北京市”); //通过可见文本去选择
 	select.selectByValue(“beijing”); //通过html中的value值去选择
@@ -22,7 +22,7 @@
 	select.getFirstSelectedOption().getText(); //单选列表直接获取值
 
 3-单选项(Radio Button)
-3-1：定位单选框元素：WebElement r_sex =driver.findElement(By.id("sexID1 "));
+3-1：定位单选框：WebElement r_sex =driver.findElement(By.id("sexID1 "));
 3-2：选择某个单选项：r_sex.click();
 3-3：清空某个单选项：r_sex.clear(); //必须是clear，单选框无法取消选择
 3-4：判断某个单选项是否已经被选择：r_sex.isSelected(); //返回的是Boolean类型
@@ -44,6 +44,26 @@
 	lang.selectByVisibleText(“English”);
 	WebElement addLanguage =driver.findElement(By.id("addButton")); //再处理向右移动的按钮
 	addLanguage.click();
+
+
+################ WebElement的全部方法 #######################
+click()
+submit()
+sendKeys(CharSequence...)
+clear()
+getTagName()
+getAttribute(String)
+isSelected()
+isEnabled()
+getText()
+findElements(By)
+findElement(By)
+isDisplayed()
+getLocation()
+getSize()
+getRect()
+getCssValue(String)
+######################################################
 
 7-弹出对话框（alert）如何区分页面对话框和弹出页面：选择弹出框，可以F12查看元素的是弹出页面，否则为弹出框。
 7-1：定位对话框：Alert alert = driver.switchTo().alert();
@@ -75,6 +95,43 @@
 12-2:frame ID定位：driver.switchTo().frame(String nameOrId); //传入参数为frame的ID或者Name属性
 12-3:frame父级定位：driver.switchTo().parentFrame(); //切换回父级 –高版本selenium可用
 12-4:frame默认定位：driver.switchTo().defaultContent(); //切换回默认
+// 得到当前窗口的句柄
+String currentWindow = driver.getWindowHandle();
+// 得到所有窗口的句柄
+Set<String> handles = driver.getWindowHandles();
+Iterator<String> it = handles.iterator();
+while (it.hasNext()) {
+	String handle = it.next();
+	if (currentWindow.equals(handle))
+	continue; //跳出当前循环
+	WebDriver window = driver.switchTo().window(handle);
+	log.info("title,url = " + window.getTitle() + ","
+	+ window.getCurrentUrl());
+}
+// 切换到指定的窗口存在--遍历最多10次（String windowTitle）
+for (int a = 0; a < =9; a++) { //循环1
+	Set<String> windowHandles = driver.getWindowHandles();
+	for (String handler : windowHandles) { //循环2
+		driver.switchTo().window(handler); //尝试切换
+		String title = driver.getTitle();
+		if (“预期结果”.equals(title)) {
+			a = 10;
+			break; //跳出循环2
+		}
+	}
+}
+理想情况下foreach循环可以获得正确的句柄，但是添加外层循环是为了提高稳定性，个别浏览器下有的时候一次遍历找不到。
+/**
+* Switches to the non-current window(切换到非当前窗口)
+*/
+public void switchOtherWindow() throws NoSuchWindowException, NoSuchWindowException {
+	Set<String> handles = driver.getWindowHandles();
+	String current = driver.getWindowHandle();
+	handles.remove(current);
+	String newHandle = handles.iterator().next();
+	driver.switchTo().window(newHandle);
+}
+
 
 13-多浏览器窗口的处理（Windows） 
 13-1：单窗口：只弹出一个窗口的情况,不需要传入任何参数,直接切换到下一个窗口
@@ -108,10 +165,21 @@
 15-2：表格内容获取：参考CommonAction方法
 
 16-富文本编辑器（执行js脚本）
+
 16-1：富文本编辑框的处理 driver.switchTo().frame("ueditor_0"); //定位到富文本输入框所在的frame 
 16-2：JavascriptExecutor js = (JavascriptExecutor) driver; 
 16-3：js.executeScript("document.body.innerHTML='ABCDEFG'"); //通过js赋值进去
-
+例子：日期框赋值
+	driver.get(baseUrl);
+    //driver.findElement(By.id("datetimeID")).sendKeys("2017-10-16"); //特殊表单控件无法通过sendkeys赋值
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("document.getElementById('datetimeID').setAttribute('value','2017-10-16');"); //可以通过执行JS语句操作页面元素
+ 
+例子2：滚动条
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("document.documentElement.scrollTop=1500");
+	
+######################## Actions全部方法介绍 ############################
 17-Actions解析
 	keyDown(Keys.ATL) //按下键ALT
 	keyDown(WebElement, Keys.ATL)//定位到元素后按下键
@@ -140,6 +208,16 @@
 	tick(Action)
 	build()
 	perform()//执行动作
+例子：
+    driver.get(baseUrl);
+    WebElement account = driver.findElement(By.id("accountID"));
+    WebElement password = driver.findElement(By.id("passwordID"));
+    account.sendKeys("123");//输入字符串。webelement的sendkeys方法注意与Action的sendkeys的区别。一个是输入字符串，一个是按下键盘普通键
+    Actions action3 = new Actions(driver);//初始化actions类。
+    action3.sendKeys(account,Keys.TAB).perform();//按tab键
+    Thread.sleep(3000);
+    action3.keyDown(Keys.CONTROL).sendKeys("a").perform();//按ctrl+a键全选
+################################################################################
 
 18-Cookie操作
 18-1：增加cookie：	
@@ -159,4 +237,45 @@
 	dr.manage().deleteCookie(cookie);
 	//第三种全部删除
 	dr.manage().deleteAllCookies();
+
+19-DOM操作（配合excuteJS函数）
+19-1：查找节点
+	document.getElementById('id属性值');	返回拥有指定id的第一个对象的引用
+	document/element.getElementsByClassName('class属性值');	返回拥有指定class的对象集合
+	document/element.getElementsByTagName('标签名');	返回拥有指定标签名的对象集合
+	document.getElementsByName('name属性值');	返回拥有指定名称的对象结合
+	document/element.querySelector('CSS选择器');	仅返回第一个匹配的元素
+	document/element.querySelectorAll('CSS选择器');	返回所有匹配的元素
+	document.documentElement	获取页面中的HTML标签
+	document.body	获取页面中的BODY标签
+	document.all['']	获取页面中的所有元素节点的对象集合型
+ 
+19-2：新建节点
+	document.createElement('元素名');	创建新的元素节点
+	document.createAttribute('属性名');	创建新的属性节点
+	document.createTextNode('文本内容');	创建新的文本节点
+	document.createComment('注释节点');	创建新的注释节点
+	document.createDocumentFragment( );	创建文档片段节点
 	
+19-3：添加新节点
+	parent.appendChild( element/txt/comment/fragment );	向父节点的最后一个子节点后追加新节点
+	parent.insertBefore( newChild, existingChild );	向父节点的某个特定子节点之前插入新节点
+	element.setAttributeNode( attributeName );	给元素增加属性节点
+	element.setAttribute( attributeName, attributeValue );	给元素增加指定属性，并设定属性值
+ 
+19-4：删除节点
+	parentNode.removeChild( existingChild );	删除已有的子节点，返回值为删除节点
+	element.removeAttribute('属性名');	删除具有指定属性名称的属性，无返回值
+	element.removeAttributeNode( attrNode );	删除指定属性，返回值为删除的属性 
+
+19-5：修改节点
+	parentNode.replaceChild( newChild, existingChild );	用新节点替换父节点中已有的子节点
+	element.setAttributeNode( attributeName );	若原元素已有该节点，此操作能达到修改该属性值的目的
+	element.setAttribute( attributeName, attributeValue );	若原元素已有该节点，此操作能达到修改该属性值的目的
+
+例子：
+1-设置元素的只读属性为false
+	new CommonAction(driver).excuteJs(driver, "document.getElementById(\"filePathInput\").readOnly=false");
+2-移除元素的隐藏属性，使元素可见
+	new CommonAction(driver).excuteJs(driver, "document.getElementById(\"submitBtn\").removeAttribute(\"disabled\");");
+		

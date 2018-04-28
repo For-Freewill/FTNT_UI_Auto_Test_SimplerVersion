@@ -218,5 +218,194 @@ public class DeviceModel {
 				+ ", collector_id=" + collector_id + ", service_tag=" + service_tag + ", unmanaged=" + unmanaged + "]";
 	}
 
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((access_ip == null) ? 0 : access_ip.hashCode());
+		result = prime * result + ((approved == null) ? 0 : approved.hashCode());
+		result = prime * result + ((asset_category == null) ? 0 : asset_category.hashCode());
+		result = prime * result + ((asset_weight == null) ? 0 : asset_weight.hashCode());
+		result = prime * result + ((collector_id == null) ? 0 : collector_id.hashCode());
+		result = prime * result + ((contact == null) ? 0 : contact.hashCode());
+		result = prime * result + ((creation_method == null) ? 0 : creation_method.hashCode());
+		result = prime * result + ((creation_time == null) ? 0 : creation_time.hashCode());
+		result = prime * result + ((cust_org_id == null) ? 0 : cust_org_id.hashCode());
+		result = prime * result + ((device_type_id == null) ? 0 : device_type_id.hashCode());
+		result = prime * result + ((discover_agent == null) ? 0 : discover_agent.hashCode());
+		result = prime * result + ((discover_enabled == null) ? 0 : discover_enabled.hashCode());
+		result = prime * result + ((discover_method == null) ? 0 : discover_method.hashCode());
+		result = prime * result + ((discover_time == null) ? 0 : discover_time.hashCode());
+		result = prime * result + ((event_pulling_method == null) ? 0 : event_pulling_method.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((last_modified_time == null) ? 0 : last_modified_time.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((natural_id == null) ? 0 : natural_id.hashCode());
+		result = prime * result + ((os_edition == null) ? 0 : os_edition.hashCode());
+		result = prime * result + ((perf_mon_enabled == null) ? 0 : perf_mon_enabled.hashCode());
+		result = prime * result + ((phy_loc == null) ? 0 : phy_loc.hashCode());
+		result = prime * result + ((service_tag == null) ? 0 : service_tag.hashCode());
+		result = prime * result + ((sys_up_time == null) ? 0 : sys_up_time.hashCode());
+		result = prime * result + ((unmanaged == null) ? 0 : unmanaged.hashCode());
+		result = prime * result + ((update_method == null) ? 0 : update_method.hashCode());
+		result = prime * result + ((version == null) ? 0 : version.hashCode());
+		result = prime * result + ((vm_name == null) ? 0 : vm_name.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DeviceModel other = (DeviceModel) obj;
+		if (access_ip == null) {
+			if (other.access_ip != null)
+				return false;
+		} else if (!access_ip.equals(other.access_ip))
+			return false;
+		if (approved == null) {
+			if (other.approved != null)
+				return false;
+		} else if (!approved.equals(other.approved))
+			return false;
+		if (asset_category == null) {
+			if (other.asset_category != null)
+				return false;
+		} else if (!asset_category.equals(other.asset_category))
+			return false;
+		if (asset_weight == null) {
+			if (other.asset_weight != null)
+				return false;
+		} else if (!asset_weight.equals(other.asset_weight))
+			return false;
+		if (collector_id == null) {
+			if (other.collector_id != null)
+				return false;
+		} else if (!collector_id.equals(other.collector_id))
+			return false;
+		if (contact == null) {
+			if (other.contact != null)
+				return false;
+		} else if (!contact.equals(other.contact))
+			return false;
+		if (creation_method == null) {
+			if (other.creation_method != null)
+				return false;
+		} else if (!creation_method.equals(other.creation_method))
+			return false;
+		if (creation_time == null) {
+			if (other.creation_time != null)
+				return false;
+		} else if (!creation_time.equals(other.creation_time))
+			return false;
+		if (cust_org_id == null) {
+			if (other.cust_org_id != null)
+				return false;
+		} else if (!cust_org_id.equals(other.cust_org_id))
+			return false;
+		if (device_type_id == null) {
+			if (other.device_type_id != null)
+				return false;
+		} else if (!device_type_id.equals(other.device_type_id))
+			return false;
+		if (discover_agent == null) {
+			if (other.discover_agent != null)
+				return false;
+		} else if (!discover_agent.equals(other.discover_agent))
+			return false;
+		if (discover_enabled == null) {
+			if (other.discover_enabled != null)
+				return false;
+		} else if (!discover_enabled.equals(other.discover_enabled))
+			return false;
+		if (discover_method == null) {
+			if (other.discover_method != null)
+				return false;
+		} else if (!discover_method.equals(other.discover_method))
+			return false;
+		if (discover_time == null) {
+			if (other.discover_time != null)
+				return false;
+		} else if (!discover_time.equals(other.discover_time))
+			return false;
+		if (event_pulling_method == null) {
+			if (other.event_pulling_method != null)
+				return false;
+		} else if (!event_pulling_method.equals(other.event_pulling_method))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (last_modified_time == null) {
+			if (other.last_modified_time != null)
+				return false;
+		} else if (!last_modified_time.equals(other.last_modified_time))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (natural_id == null) {
+			if (other.natural_id != null)
+				return false;
+		} else if (!natural_id.equals(other.natural_id))
+			return false;
+		if (os_edition == null) {
+			if (other.os_edition != null)
+				return false;
+		} else if (!os_edition.equals(other.os_edition))
+			return false;
+		if (perf_mon_enabled == null) {
+			if (other.perf_mon_enabled != null)
+				return false;
+		} else if (!perf_mon_enabled.equals(other.perf_mon_enabled))
+			return false;
+		if (phy_loc == null) {
+			if (other.phy_loc != null)
+				return false;
+		} else if (!phy_loc.equals(other.phy_loc))
+			return false;
+		if (service_tag == null) {
+			if (other.service_tag != null)
+				return false;
+		} else if (!service_tag.equals(other.service_tag))
+			return false;
+		if (sys_up_time == null) {
+			if (other.sys_up_time != null)
+				return false;
+		} else if (!sys_up_time.equals(other.sys_up_time))
+			return false;
+		if (unmanaged == null) {
+			if (other.unmanaged != null)
+				return false;
+		} else if (!unmanaged.equals(other.unmanaged))
+			return false;
+		if (update_method == null) {
+			if (other.update_method != null)
+				return false;
+		} else if (!update_method.equals(other.update_method))
+			return false;
+		if (version == null) {
+			if (other.version != null)
+				return false;
+		} else if (!version.equals(other.version))
+			return false;
+		if (vm_name == null) {
+			if (other.vm_name != null)
+				return false;
+		} else if (!vm_name.equals(other.vm_name))
+			return false;
+		return true;
+	}
+
 	
 }

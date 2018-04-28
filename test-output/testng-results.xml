@@ -2,127 +2,127 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19451" started-at="2018-04-26T03:24:08Z" finished-at="2018-04-26T03:24:27Z">
+  <suite name="Default suite" duration-ms="30540" started-at="2018-04-28T08:51:53Z" finished-at="2018-04-28T08:52:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19451" started-at="2018-04-26T03:24:08Z" finished-at="2018-04-26T03:24:27Z">
-      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.User">
-        <test-method status="PASS" signature="initTest(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="initTest" is-config="true" duration-ms="50" started-at="2018-04-26T03:24:08Z" finished-at="2018-04-26T03:24:08Z">
+    <test name="Default test" duration-ms="30540" started-at="2018-04-28T08:51:53Z" finished-at="2018-04-28T08:52:24Z">
+      <class name="ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest">
+        <test-method status="PASS" signature="initTest(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956]" name="initTest" is-config="true" duration-ms="52" started-at="2018-04-28T08:51:53Z" finished-at="2018-04-28T08:51:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@5e4b1afb]]>
+                <![CDATA[org.testng.xml.XmlTest@57fbc9aa]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@14fc1f0]]>
+                <![CDATA[org.testng.TestRunner@7b205dbd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initTest -->
-        <test-method status="PASS" signature="beforeClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="beforeClass" is-config="true" duration-ms="4" started-at="2018-04-26T03:24:08Z" finished-at="2018-04-26T03:24:08Z">
+        <test-method status="PASS" signature="beforeClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956]" name="beforeClass" is-config="true" duration-ms="4" started-at="2018-04-28T08:51:53Z" finished-at="2018-04-28T08:51:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@5e4b1afb]]>
+                <![CDATA[org.testng.xml.XmlTest@57fbc9aa]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@14fc1f0]]>
+                <![CDATA[org.testng.TestRunner@7b205dbd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="initDriver" is-config="true" duration-ms="5265" started-at="2018-04-26T03:24:08Z" finished-at="2018-04-26T03:24:13Z">
+        <test-method status="PASS" signature="initDriver(org.testng.ITestContext, java.lang.reflect.Method, org.testng.xml.XmlTest)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956]" name="initDriver" is-config="true" duration-ms="4315" started-at="2018-04-28T08:51:53Z" finished-at="2018-04-28T08:51:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@14fc1f0]]>
+                <![CDATA[org.testng.TestRunner@7b205dbd]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function1() throws java.lang.Exception]]>
+                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest.getUUID() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@5e4b1afb]]>
+                <![CDATA[org.testng.xml.XmlTest@57fbc9aa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="function1" duration-ms="12158" started-at="2018-04-26T03:24:13Z" finished-at="2018-04-26T03:24:25Z">
+        <test-method status="PASS" signature="getUUID()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956]" name="getUUID" duration-ms="24197" started-at="2018-04-28T08:51:57Z" finished-at="2018-04-28T08:52:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- function1 -->
-        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="cleanEnv" is-config="true" duration-ms="2004" started-at="2018-04-26T03:24:25Z" finished-at="2018-04-26T03:24:27Z">
+        </test-method> <!-- getUUID -->
+        <test-method status="PASS" signature="cleanEnv(org.testng.ITestResult, org.testng.xml.XmlTest, java.lang.reflect.Method, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956]" name="cleanEnv" is-config="true" duration-ms="2002" started-at="2018-04-28T08:52:22Z" finished-at="2018-04-28T08:52:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=function1 status=SUCCESS method=User.function1()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956] output={null}]]]>
+                <![CDATA[[TestResult name=getUUID status=SUCCESS method=RegisterTest.getUUID()[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@5e4b1afb]]>
+                <![CDATA[org.testng.xml.XmlTest@57fbc9aa]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.User.function1() throws java.lang.Exception]]>
+                <![CDATA[public void ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest.getUUID() throws java.lang.InterruptedException,java.io.IOException]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[org.testng.TestRunner@14fc1f0]]>
+                <![CDATA[org.testng.TestRunner@7b205dbd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanEnv -->
-        <test-method status="PASS" signature="afterClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="afterClass" is-config="true" duration-ms="3" started-at="2018-04-26T03:24:27Z" finished-at="2018-04-26T03:24:27Z">
+        <test-method status="PASS" signature="afterClass(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956]" name="afterClass" is-config="true" duration-ms="2" started-at="2018-04-28T08:52:24Z" finished-at="2018-04-28T08:52:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@5e4b1afb]]>
+                <![CDATA[org.testng.xml.XmlTest@57fbc9aa]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@14fc1f0]]>
+                <![CDATA[org.testng.TestRunner@7b205dbd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="terminTestSuite(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.User@51931956]" name="terminTestSuite" is-config="true" duration-ms="2" started-at="2018-04-26T03:24:27Z" finished-at="2018-04-26T03:24:27Z">
+        <test-method status="PASS" signature="terminTestSuite(org.testng.xml.XmlTest, org.testng.ITestContext)[pri:0, instance:ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest@51931956]" name="terminTestSuite" is-config="true" duration-ms="1" started-at="2018-04-28T08:52:24Z" finished-at="2018-04-28T08:52:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.xml.XmlTest@5e4b1afb]]>
+                <![CDATA[org.testng.xml.XmlTest@57fbc9aa]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[org.testng.TestRunner@14fc1f0]]>
+                <![CDATA[org.testng.TestRunner@7b205dbd]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminTestSuite -->
-      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.User -->
+      </class> <!-- ftnt.qa.autotest.ui.fortisiem.testcases.RegisterTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
